@@ -2,7 +2,7 @@
 
 > 中文摘要：当前任务是建立可复现的单粒子理想 SimHit 基线。先核对 ROOT 模式与入射真值定义，再制定特征白名单、生成覆盖不同粒子和相空间的数据、按事例划分数据集，最后比较传统方法与简单神经网络，并同时报告分辨率和效率。
 
-Stage 1 is defined in the [roadmap](ROADMAP.md). This checklist describes future implementation work; none of the items below is delivered by this documentation-only change.
+Stage 1 is defined in the [roadmap](ROADMAP.md). A static source generator, MPI launcher, and dataset reader now exist, but have not been run; none of the acceptance checks below is complete until they are verified against real output.
 
 ## 1. Verify data and label semantics
 
