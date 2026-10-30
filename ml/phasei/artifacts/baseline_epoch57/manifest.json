@@ -1,0 +1,26 @@
+{
+  "checkpoint": {
+    "path": "best.pt",
+    "original_path": "build/phasei_ml_training_10m_batch4096_20261030/best.pt",
+    "sha256": "9307d38f0ac08475c221844c8679e82ccbde0255603f6e2c4155a6ba69f9cb2f"
+  },
+  "evaluation_checkpoint_snapshot": {
+    "path": "evaluation_checkpoint_snapshot.pt",
+    "original_path": "build/phasei_eval_best10m_20261030_175701/checkpoint_snapshot.pt",
+    "sha256": "d6b9b0023d098949f490dd1418ea8c5f3400f835daee2de152b00de25516d1b0"
+  },
+  "model_state_tensors_equal": true,
+  "model_config_equal": true,
+  "best_epoch": 57,
+  "dataset_manifest_sha256": "267ad10f48fcd1f0241be47c1c580a2bc88acf3b9a4075fc65245bddfa4c06d6",
+  "checkpoint_code_snapshot_sha256": "1b245ef1bfa9dfb4bd8bbf0658f3b34012e39642d5793dce6d55728a2c174d8e",
+  "code_snapshot_matches_committed_source": true,
+  "validation_loss": 0.1622426463545041,
+  "full_test_total_nll": 0.15851705521345139,
+  "metrics_file": {
+    "path": "metrics.json",
+    "original_path": "build/phasei_eval_best10m_20261030_175701/metrics.json",
+    "sha256": "bc8cff0d3be5b8c3b1300268c90685f5203d3b0e00dea55cafb60e249d0af4d8"
+  },
+  "source_commit": "67490de78fd291248e3f1f42f2ef74175536d3d7"
+}
