@@ -30,7 +30,7 @@
 
 #include "G4BuilderType.hh"
 #include "G4EmParameters.hh"
-#include "G4EmStandardPhysics_option4.hh"
+#include "G4EmStandardPhysics_option3.hh"
 #include "G4MscStepLimitType.hh"
 #include "G4OpticalParameters.hh"
 #include "G4OpticalPhysics.hh"
@@ -48,8 +48,8 @@ namespace MACE::inline Simulation::inline Physics {
 StandardPhysicsListBase::StandardPhysicsListBase() :
     QBBC{std::max({}, muc::to_underlying(Mustard::Env::BasicEnv::Instance().VerboseLevel()))},
     fMessengerRegister{this} {
-    // EMZ
-    ReplacePhysics(new G4EmStandardPhysics_option4{verboseLevel});
+    // EMY
+    ReplacePhysics(new G4EmStandardPhysics_option3{verboseLevel});
     // Muonium physics
     RegisterPhysics(new Mustard::Geant4X::MuoniumPhysics<Detector::Description::Target>{verboseLevel});
     // HP decay for muon and muonium
