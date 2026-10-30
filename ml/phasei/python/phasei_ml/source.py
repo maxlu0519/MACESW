@@ -215,6 +215,21 @@ def _generate_chunk(
     transverse = np.sqrt(np.maximum(0.0, 1.0 - cosine * cosine))
     total_energy = kinetic + mass_mev
     momentum = np.sqrt(np.maximum(0.0, total_energy * total_energy - mass_mev * mass_mev))
+    px = (momentum * transverse * np.cos(direction_phi)).astype(np.float32)
+    py = (momentum * transverse * np.sin(direction_phi)).astype(np.float32)
+    pz = (momentum * cosine).astype(np.float32)
+    energy = total_energy.astype(np.float32)
+    if particle == "gamma":
+        # G4PrimaryParticle infers mass from the supplied four-vector. With
+        # vector<float> branches, independently rounded E and p can give a
+        # photon a spurious ~keV mass. Keep E one float ULP below |p| so the
+        # inferred mass is zero despite component rounding.
+        pnorm = np.sqrt(
+            px.astype(np.float64) ** 2
+            + py.astype(np.float64) ** 2
+            + pz.astype(np.float64) ** 2
+        )
+        energy = np.nextafter(pnorm.astype(np.float32), np.float32(-np.inf))
     return chunk_id, {
         "w": np.ones(count, dtype=np.float32),
         "t": np.zeros(count, dtype=np.float64),
@@ -222,10 +237,10 @@ def _generate_chunk(
         "y": (radius * np.sin(position_phi)).astype(np.float32),
         "z": z.astype(np.float32),
         "pdgID": np.full(count, pdg_id, dtype=np.int32),
-        "E": total_energy.astype(np.float32),
-        "px": (momentum * transverse * np.cos(direction_phi)).astype(np.float32),
-        "py": (momentum * transverse * np.sin(direction_phi)).astype(np.float32),
-        "pz": (momentum * cosine).astype(np.float32),
+        "E": energy,
+        "px": px,
+        "py": py,
+        "pz": pz,
     }
 
 

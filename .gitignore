@@ -5,6 +5,9 @@
 **/.tmp/
 **/.vs/
 **/.vscode/
+/.venv/
+**/__pycache__/
+**/*.pyc
 **/*.a
 **/*.bin
 **/*.dll

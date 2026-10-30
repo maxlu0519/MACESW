@@ -1,0 +1,25 @@
+# GTX 1660 SUPER throughput-focused single-particle run, validated on the
+# existing 100k gamma + 100k positron dataset. Test data is not read by train.
+seed: 42
+device: cuda:0
+training:
+  epochs: 120
+  batch_size: 4096
+  learning_rate: 0.002
+  patience: 15
+  optimizer: AdamW
+  precision: float32
+  input_pipeline: vectorized
+  num_workers: 0
+  loss_weights: {pid: 1.0, energy: 1.0, position: 1.0, direction: 1.0}
+model:
+  detector_embedding_dim: 8
+  hit_mlp: [10, 64, 64]
+  pooled_detector_dim: 64
+  fusion: [209, 128, 128]
+  experts: 3
+  expert_mlp: [128, 128, 128]
+  pid_classes: 2
+  energy_gaussian_components: 5
+  position_gaussian_components: 4
+  direction_vmf_components: 2

@@ -67,6 +67,19 @@ class SourceContractTests(unittest.TestCase):
         self.assertTrue(((energy**2 - momentum2 - mass**2).__abs__() < 2e-3).all())
 
     @unittest.skipUnless(importlib.util.find_spec("numpy"), "NumPy is optional")
+    def test_gamma_float_four_vectors_do_not_gain_spurious_mass(self):
+        import numpy as np
+
+        _, chunk = source._generate_chunk(0, 10000, 7, "gamma")
+        momentum = np.sqrt(
+            chunk["px"].astype(np.float64) ** 2
+            + chunk["py"].astype(np.float64) ** 2
+            + chunk["pz"].astype(np.float64) ** 2
+        )
+        self.assertTrue((chunk["E"] <= momentum).all())
+        self.assertTrue((momentum - chunk["E"] < 1e-5).all())
+
+    @unittest.skipUnless(importlib.util.find_spec("numpy"), "NumPy is optional")
     def test_chunk_seed_depends_on_chunk_id(self):
         first = source._generate_chunk(0, 8, 11, "gamma")[1]
         repeat = source._generate_chunk(0, 8, 11, "gamma")[1]
