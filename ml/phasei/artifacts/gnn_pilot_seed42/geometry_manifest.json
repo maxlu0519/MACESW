@@ -1,0 +1,12 @@
+{
+  "counts": {
+    "ecal": 488,
+    "scifi": 2360,
+    "ttc": 108
+  },
+  "geometry_export": "geometry.json",
+  "geometry_export_sha256": "2b1c2ff577c386e60459be31374cbe4c2702650edad19b8c40275248b4f6757d",
+  "geometry_yaml": "../../../../src/app/simulation/MACE/PhaseI/SimMACEPhaseI/scripts/SimMACEPhaseI_geom.yaml",
+  "geometry_yaml_sha256": "ca52b495fd38202b27a1d6dd50f1b617a1a7e2a093554fc13791bb4e1eb34662",
+  "schema_version": 1
+}

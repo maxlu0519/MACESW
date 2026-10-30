@@ -103,7 +103,72 @@ To start one million gamma and one million positron events with `nohup`, run fro
 
 The script writes under `build/phasei_training_1m_20261029` by default. It generates both sources concurrently using four workers each, then launches both simulations concurrently with four MPI ranks each. `run.log`, per-particle logs, `status.txt`, and `run.pid` remain in that directory. Set `PHASEI_OUTPUT_DIR`, `PHASEI_SOURCE_WORKERS`, or `PHASEI_MPI_RANKS` to override defaults before launching. Run in an environment with PyROOT, NumPy, and MPI; the script preserves the existing ROOT `PYTHONPATH`.
 
-These Python tools do not change the default MACESW build. If a native adapter is needed later, it should live under this directory, reuse MACE/Mustard data types, and be built only by an explicit opt-in. Training and evaluation can remain separate from the C++ build. No graph neural network or waveform model is required for the initial single-particle baseline.
+These Python tools do not change the default MACESW build. The optional C++ geometry exporter reuses MACE/Mustard detector descriptions and is built only by an explicit opt-in. Training and evaluation remain separate from the C++ build. The V1 single-particle baseline remains available; the graph study below is a separate model path.
+
+## Opt-in geometry-aware graph model
+
+The graph model reads the same 100k-per-species converted dataset and its existing 80/10/10 event split. It adds no SimHit features: one node represents each observed detector channel in an event, channel energy deposits are summed, and the earliest channel hit time is measured relative to the event's earliest hit. Events with no hits remain in the dataset. Edges are built within each event only; no hit truncation is applied. Truth arrays supply training targets only.
+
+Build the optional C++ geometry exporter with the explicit CMake switch. It imports the simulation geometry YAML alongside Phase I detector defaults, then exports all SciFi fibers, TTC tiles, ECAL modules, and the ECAL neighbor table. The Python wrapper records both the YAML and canonical export hashes; GNN data loading checks the YAML hash against the converted dataset provenance.
+
+```sh
+cmake -S . -B build/phasei_gnn_export -DMACESW_BUILD_PHASEI_GNN_GEOMETRY_EXPORT=ON
+cmake --build build/phasei_gnn_export --target phasei_gnn_geometry_export -j2
+PYTHONPATH=ml/phasei/python .venv/bin/python -m phasei_ml.export_geometry \
+  --exporter build/phasei_gnn_export/phasei_gnn_geometry_export \
+  --geometry-yaml src/app/simulation/MACE/PhaseI/SimMACEPhaseI/scripts/SimMACEPhaseI_geom.yaml \
+  --output build/phasei_gnn_geometry/geometry.json
+```
+
+The GNN has detector-specific gated edge networks (SciFi 16-d channel embedding/160 hidden/4 blocks, TTC 8/96/2, ECAL 8/160/3), two attention pools per detector, and a seven-token two-layer Transformer fusion block. It predicts two-class PID, a five-component Gaussian energy mixture, a four-component full-covariance position mixture, and a four-component von Mises–Fisher direction mixture. A learned event prior handles the all-zero-hit case.
+
+SciFi cross-layer edges are candidate neighbors inferred from fiber geometry,
+not exact helical intersections at a reconstructed longitudinal position. TTC
+tile adjacency is approximated by the 12 nearest tile centers because the
+Phase I description does not provide a neighbor table; ECAL uses its native
+crystal-neighbor list.
+
+SciFi cross-layer edges are geometry-based candidate adjacencies derived from fiber local IDs, rotation, pitch, and radius over at most four layers. They approximate neighborhood structure and do not represent exact helix intersections at a reconstructed z; this approximation may affect direction metrics.
+
+Training fits all feature and target normalizations on the training split only and does not load test hit values. For the current 100k-per-species dataset, use seed 42, FP32 AdamW at `3e-4` with weight decay `0.01`, effective batch 2048, at most 80 epochs, and patience 10:
+
+```sh
+PYTHONPATH=ml/phasei/python .venv/bin/python -m phasei_ml.gnn_train \
+  --data build/phasei_ml_dataset_v1 \
+  --geometry build/phasei_gnn_geometry/geometry.json \
+  --output build/phasei_gnn_pilot_seed42_mb512_workers2_20261030/best.pt \
+  --last-output build/phasei_gnn_pilot_seed42_mb512_workers2_20261030/last.pt \
+  --seed 42 --epochs 80 --patience 10 --batch-size 512 --grad-accum 4 \
+  --num-workers 2 --device cuda:0
+```
+
+A full forward/backward benchmark on the GTX 1660 SUPER compared 8,192 training-split events at effective batch 2,048. With `512×4`, two persistent graph-loader workers improved throughput from 4,249 to 5,520 events/s (29.8%) versus zero workers, including worker startup; both settings peaked at 482 MiB reserved. Full-epoch time improved from 32–33 seconds to 19 seconds. The full-data pilot uses a fresh run directory for `num_workers=2`; earlier `256×8` and zero-worker `512×4` runs are preserved as preliminary configurations.
+
+| Microbatch × accumulation | Optimizer-step time | CPU collation time | Peak reserved GPU memory |
+|---|---:|---:|---:|
+| 256 × 8 | 0.356 s | 0.182 s | 258 MiB |
+| 512 × 4 | 0.188 s | 0.177 s | 452 MiB |
+| 1024 × 2 | 0.213 s | 0.176 s | 816 MiB |
+| 2048 × 1 | 0.247 s | 0.179 s | 1,560 MiB |
+
+The optimizer-step benchmark preserves effective batch size across rows; the 8,192-event worker comparison measures the complete forward/backward/optimizer path and includes worker startup amortized over four updates.
+
+The held-out evaluator runs only after selecting a checkpoint. It writes per-particle, energy-bin, and detector-hit-combination metrics, confusion matrices, compressed test predictions, and a Markdown report. `--baseline-checkpoint` runs the existing Phase I model on the same held-out split for a fair comparison.
+
+```sh
+PYTHONPATH=ml/phasei/python .venv/bin/python -m phasei_ml.gnn_evaluate \
+  --checkpoint build/phasei_gnn_pilot_seed42_mb512_workers2_20261030/best.pt \
+  --data build/phasei_ml_dataset_v1 \
+  --geometry build/phasei_gnn_geometry/geometry.json \
+  --baseline-checkpoint build/phasei_ml_training_batch4096_v1/best.pt \
+  --output-dir build/phasei_gnn_pilot_seed42_mb512_workers2_20261030/evaluation --device cuda:0
+```
+
+The geometry export is opt-in and the normal MACESW build is unchanged when `MACESW_BUILD_PHASEI_GNN_GEOMETRY_EXPORT` is left OFF.
+
+The completed 100k-per-species pilot, selected checkpoint, geometry export,
+same-data baseline checkpoint, and held-out report are archived in
+[artifacts/gnn_pilot_seed42/EXPERIMENT.md](artifacts/gnn_pilot_seed42/EXPERIMENT.md).
 
 ## Documents
 

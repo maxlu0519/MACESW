@@ -59,6 +59,7 @@ set(MACESW_DATAROOTDIR ${CMAKE_INSTALL_DATAROOTDIR}/MACE)
 # =============================================================================
 
 # Options (in alphabetical order) (ON/OFF)
+option(MACESW_BUILD_PHASEI_GNN_GEOMETRY_EXPORT "Build the opt-in Phase-I GNN channel geometry exporter." OFF)
 option(MACESW_BUILTIN_GENFIT "Use built-in GenFit (network or pre-downloaded source is required)." ON)
 option(MACESW_BUILTIN_GENFIT_EVENT_DISPLAY "Build GenFit event display module if GenFit is built-in." ON)
 option(MACESW_BUILTIN_MACESW_OFFLINE_DATA "Use built-in offline data (network or pre-downloaded data are required)." OFF)
@@ -156,3 +157,10 @@ target_link_libraries(MACE AppMACEGenerator
                            AppMACEUtility
                            Mustard::Mustard)
 install(TARGETS MACE DESTINATION ${CMAKE_INSTALL_BINDIR})
+
+if(MACESW_BUILD_PHASEI_GNN_GEOMETRY_EXPORT)
+    add_executable(phasei_gnn_geometry_export ml/phasei/cpp/geometry_export.cpp)
+    target_link_libraries(phasei_gnn_geometry_export PRIVATE AppMACESimulation
+                                                             MACEDetector
+                                                             Mustard::Mustard)
+endif()

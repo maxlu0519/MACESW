@@ -1,0 +1,21 @@
+{
+  "best_epoch": 44,
+  "dataset": "gamma and e+; 100000 generated events per species; existing 80/10/10 split",
+  "dataset_manifest_sha256": "2696e754c26482a7e309b3a66a0afffe52196802f67dbe843aa3429b7db2b573",
+  "files_sha256": {
+    "EXPERIMENT.md": "355e9423f284832f28a7624bccb2bcdc3f6e55118c3b2fc1e0187527bf51455f",
+    "best.pt": "aeb30fdf53b82c03bc9740b628356ede0adf33c77ab83a7ed605982f3729773a",
+    "geometry.json": "2b1c2ff577c386e60459be31374cbe4c2702650edad19b8c40275248b4f6757d",
+    "geometry_manifest.json": "7322d137c6f9292523063072e4cf3b85861ac430aba2ad097a4a4e8098931b80",
+    "metrics.json": "701b398e0c10940cfdcadd3f4c31c73f2cf8204d71d2b7c4ca6c9b95b17faa6f",
+    "old_100k_best.pt": "cb5d7b61e6683199adc1d83f4a721a999717493e13a1b511ccd7124766409a22",
+    "report.md": "54adab16531a1e643535429b39216fe2481ff804b05669022927c43ebb495664",
+    "test_predictions.npz": "ba293353aa101ca481bf6e74703e9cd9c3883c6044cfa4206da68e27be47e97b",
+    "training_result.json": "397a0d9a15eb6ffbc3a9e5827603a326edb43650a6a1a4404a0e6b9bf457fa4d"
+  },
+  "geometry_export_sha256": "2b1c2ff577c386e60459be31374cbe4c2702650edad19b8c40275248b4f6757d",
+  "geometry_yaml_sha256": "ca52b495fd38202b27a1d6dd50f1b617a1a7e2a093554fc13791bb4e1eb34662",
+  "parameter_count": 3111629,
+  "schema_version": 1,
+  "training_code_snapshot_sha256": "2d644a9e021f7e086a41bf57f51b868d584e7d1ad68957a78e2e50a4e01ebcbf"
+}

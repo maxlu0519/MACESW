@@ -1,0 +1,2681 @@
+{
+  "test_events": 20010,
+  "losses": {
+    "pid": 0.12915699318729001,
+    "energy": 0.07687592978241561,
+    "position": 3.591146505909643,
+    "direction": -1.004082502739719
+  },
+  "total_nll": 2.7930969261396292,
+  "pid_accuracy": 0.95872063968016,
+  "energy_bias_mev": 0.03923214150332976,
+  "energy_abs_q68_mev": 5.319823684692383,
+  "position_3d_q68_mm": 28.10569932820939,
+  "direction_angle_q68_deg": 12.36625011444092,
+  "direction_angle_q95_deg": 108.9832290649414,
+  "checkpoint": "/home/luguihao/Documents/Repositories/MACESW/build/phasei_gnn_pilot_seed42_ecal_normals_20261030/best.pt",
+  "best_epoch": 44,
+  "data_manifest_sha256": "2696e754c26482a7e309b3a66a0afffe52196802f67dbe843aa3429b7db2b573",
+  "geometry_yaml_sha256": "ca52b495fd38202b27a1d6dd50f1b617a1a7e2a093554fc13791bb4e1eb34662",
+  "geometry_export_sha256": "2b1c2ff577c386e60459be31374cbe4c2702650edad19b8c40275248b4f6757d",
+  "grouped_metrics": {
+    "all": {
+      "n": 20010,
+      "pid_confusion_true_rows": [
+        [
+          9691,
+          313
+        ],
+        [
+          513,
+          9493
+        ]
+      ],
+      "pid_accuracy": 0.95872063968016,
+      "energy_bias_mev": 0.03923214150332976,
+      "energy_abs_q68_mev": 5.319823684692383,
+      "position_3d_q68_mm": 28.10569932820939,
+      "direction_angle_q68_deg": 12.36625011444092,
+      "direction_angle_q95_deg": 108.9832290649414,
+      "total_nll": 2.7930967807769775
+    },
+    "particle:e+": {
+      "n": 10006,
+      "pid_confusion_true_rows": [
+        [
+          0,
+          0
+        ],
+        [
+          513,
+          9493
+        ]
+      ],
+      "pid_accuracy": 0.9487307615430741,
+      "energy_bias_mev": -0.007481666510042705,
+      "energy_abs_q68_mev": 4.594015502929688,
+      "position_3d_q68_mm": 24.2013561584285,
+      "direction_angle_q68_deg": 13.444558143615723,
+      "direction_angle_q95_deg": 63.500433921813965,
+      "total_nll": 2.2787139415740967
+    },
+    "particle:gamma": {
+      "n": 10004,
+      "pid_confusion_true_rows": [
+        [
+          9691,
+          313
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "pid_accuracy": 0.9687125149940023,
+      "energy_bias_mev": 0.08595528854269449,
+      "energy_abs_q68_mev": 6.18745849609375,
+      "position_3d_q68_mm": 30.304509080457787,
+      "direction_angle_q68_deg": 9.388821678161625,
+      "direction_angle_q95_deg": 122.63601303100587,
+      "total_nll": 3.3075833320617676
+    },
+    "energy_mev:0-5": {
+      "n": 1696,
+      "pid_confusion_true_rows": [
+        [
+          759,
+          83
+        ],
+        [
+          100,
+          754
+        ]
+      ],
+      "pid_accuracy": 0.8920990566037735,
+      "energy_bias_mev": 5.612275333337064,
+      "energy_abs_q68_mev": 3.4462608337402343,
+      "position_3d_q68_mm": 30.048790603322317,
+      "direction_angle_q68_deg": 45.11592712402344,
+      "direction_angle_q95_deg": 124.02914428710938,
+      "total_nll": 4.161673545837402
+    },
+    "energy_mev:5-10": {
+      "n": 1674,
+      "pid_confusion_true_rows": [
+        [
+          830,
+          34
+        ],
+        [
+          40,
+          770
+        ]
+      ],
+      "pid_accuracy": 0.955794504181601,
+      "energy_bias_mev": 5.084818232728874,
+      "energy_abs_q68_mev": 3.3759601593017585,
+      "position_3d_q68_mm": 29.31728824214577,
+      "direction_angle_q68_deg": 24.36513656616211,
+      "direction_angle_q95_deg": 114.80876350402832,
+      "total_nll": 3.4344916343688965
+    },
+    "energy_mev:10-20": {
+      "n": 3310,
+      "pid_confusion_true_rows": [
+        [
+          1584,
+          48
+        ],
+        [
+          90,
+          1588
+        ]
+      ],
+      "pid_accuracy": 0.9583081570996979,
+      "energy_bias_mev": 4.260050736741357,
+      "energy_abs_q68_mev": 4.805106735229494,
+      "position_3d_q68_mm": 28.366892451146153,
+      "direction_angle_q68_deg": 16.012706222534185,
+      "direction_angle_q95_deg": 104.96656684875482,
+      "total_nll": 2.96394944190979
+    },
+    "energy_mev:20-40": {
+      "n": 6733,
+      "pid_confusion_true_rows": [
+        [
+          3318,
+          70
+        ],
+        [
+          141,
+          3204
+        ]
+      ],
+      "pid_accuracy": 0.9686618149413337,
+      "energy_bias_mev": 1.3233866173888535,
+      "energy_abs_q68_mev": 5.111404571533203,
+      "position_3d_q68_mm": 27.592410739468473,
+      "direction_angle_q68_deg": 10.66924716949463,
+      "direction_angle_q95_deg": 107.31156921386717,
+      "total_nll": 2.601519823074341
+    },
+    "energy_mev:40-60": {
+      "n": 6597,
+      "pid_confusion_true_rows": [
+        [
+          3200,
+          78
+        ],
+        [
+          142,
+          3177
+        ]
+      ],
+      "pid_accuracy": 0.966651508261331,
+      "energy_bias_mev": -6.10224337864775,
+      "energy_abs_q68_mev": 7.803394927978521,
+      "position_3d_q68_mm": 27.328726963232683,
+      "direction_angle_q68_deg": 8.224553070068362,
+      "direction_angle_q95_deg": 105.41230926513668,
+      "total_nll": 2.3883016109466553
+    },
+    "hit_combination:none": {
+      "n": 2716,
+      "pid_confusion_true_rows": [
+        [
+          2384,
+          0
+        ],
+        [
+          332,
+          0
+        ]
+      ],
+      "pid_accuracy": 0.8777614138438881,
+      "energy_bias_mev": -0.08610977445329938,
+      "energy_abs_q68_mev": 20.36426124572754,
+      "position_3d_q68_mm": 30.489745384246135,
+      "direction_angle_q68_deg": 110.40875854492188,
+      "direction_angle_q95_deg": 144.8568229675293,
+      "total_nll": 7.76807165145874
+    },
+    "hit_combination:TTC": {
+      "n": 41,
+      "pid_confusion_true_rows": [
+        [
+          28,
+          2
+        ],
+        [
+          7,
+          4
+        ]
+      ],
+      "pid_accuracy": 0.7804878048780488,
+      "energy_bias_mev": 0.9565481325475181,
+      "energy_abs_q68_mev": 18.602201080322267,
+      "position_3d_q68_mm": 32.440631511453226,
+      "direction_angle_q68_deg": 8.584695053100589,
+      "direction_angle_q95_deg": 18.8033390045166,
+      "total_nll": 4.695535182952881
+    },
+    "hit_combination:SciFi": {
+      "n": 221,
+      "pid_confusion_true_rows": [
+        [
+          23,
+          25
+        ],
+        [
+          2,
+          171
+        ]
+      ],
+      "pid_accuracy": 0.8778280542986425,
+      "energy_bias_mev": 0.5431002189670753,
+      "energy_abs_q68_mev": 13.318893814086916,
+      "position_3d_q68_mm": 28.747683581115584,
+      "direction_angle_q68_deg": 43.18456039428712,
+      "direction_angle_q95_deg": 117.98871612548828,
+      "total_nll": 4.917896747589111
+    },
+    "hit_combination:TTC+SciFi": {
+      "n": 587,
+      "pid_confusion_true_rows": [
+        [
+          27,
+          11
+        ],
+        [
+          1,
+          548
+        ]
+      ],
+      "pid_accuracy": 0.979557069846678,
+      "energy_bias_mev": 0.5429832370764556,
+      "energy_abs_q68_mev": 12.975819244384766,
+      "position_3d_q68_mm": 24.566390414489415,
+      "direction_angle_q68_deg": 9.272534713745118,
+      "direction_angle_q95_deg": 18.20377063751218,
+      "total_nll": 2.782191514968872
+    },
+    "hit_combination:ECAL": {
+      "n": 6641,
+      "pid_confusion_true_rows": [
+        [
+          6363,
+          35
+        ],
+        [
+          95,
+          148
+        ]
+      ],
+      "pid_accuracy": 0.98042463484415,
+      "energy_bias_mev": -0.0037905548444948107,
+      "energy_abs_q68_mev": 4.273567962646485,
+      "position_3d_q68_mm": 30.326533181123157,
+      "direction_angle_q68_deg": 6.090983486175541,
+      "direction_angle_q95_deg": 11.40939998626709,
+      "total_nll": 1.811696171760559
+    },
+    "hit_combination:TTC+ECAL": {
+      "n": 369,
+      "pid_confusion_true_rows": [
+        [
+          316,
+          10
+        ],
+        [
+          19,
+          24
+        ]
+      ],
+      "pid_accuracy": 0.9214092140921409,
+      "energy_bias_mev": 0.46137436037141133,
+      "energy_abs_q68_mev": 4.356542358398437,
+      "position_3d_q68_mm": 29.799157038360303,
+      "direction_angle_q68_deg": 9.327286224365235,
+      "direction_angle_q95_deg": 61.7320205688476,
+      "total_nll": 2.845527410507202
+    },
+    "hit_combination:SciFi+ECAL": {
+      "n": 1777,
+      "pid_confusion_true_rows": [
+        [
+          186,
+          80
+        ],
+        [
+          22,
+          1489
+        ]
+      ],
+      "pid_accuracy": 0.9425998874507597,
+      "energy_bias_mev": -0.14325121191021561,
+      "energy_abs_q68_mev": 3.0775708007812503,
+      "position_3d_q68_mm": 28.371581878677677,
+      "direction_angle_q68_deg": 24.766123657226565,
+      "direction_angle_q95_deg": 69.368081665039,
+      "total_nll": 3.6910552978515625
+    },
+    "hit_combination:TTC+SciFi+ECAL": {
+      "n": 7658,
+      "pid_confusion_true_rows": [
+        [
+          364,
+          150
+        ],
+        [
+          35,
+          7109
+        ]
+      ],
+      "pid_accuracy": 0.9758422564638287,
+      "energy_bias_mev": 0.08493312303688047,
+      "energy_abs_q68_mev": 4.310313568115235,
+      "position_3d_q68_mm": 22.743333521646512,
+      "direction_angle_q68_deg": 10.84064239501953,
+      "direction_angle_q95_deg": 24.39700317382812,
+      "total_nll": 1.598170280456543
+    }
+  },
+  "old_100k_baseline": {
+    "checkpoint": "/home/luguihao/Documents/Repositories/MACESW/build/phasei_ml_training_batch4096_v1/best.pt",
+    "best_epoch": 103,
+    "data_manifest_sha256": "2696e754c26482a7e309b3a66a0afffe52196802f67dbe843aa3429b7db2b573",
+    "grouped_metrics": {
+      "all": {
+        "n": 20010,
+        "statistically_small": false,
+        "pid_accuracy": 0.9806096951524238,
+        "pid_accuracy_ci95": [
+          0.9787343828085957,
+          0.9825587206396802
+        ],
+        "pid_brier_ci95": [
+          0.030837434370211414,
+          0.0361925035859366
+        ],
+        "pid_brier": 0.03344240139097876,
+        "pid_ece_10bin": 0.0025472129153824006,
+        "pid_confusion_true_rows": [
+          [
+            9972,
+            32
+          ],
+          [
+            356,
+            9650
+          ]
+        ],
+        "energy_bias_mev": -0.274497781605725,
+        "energy_bias_ci95": [
+          -0.3993604102614091,
+          -0.16039428591212954
+        ],
+        "energy_abs_residual_68_mev": 4.525026092529299,
+        "energy_abs68_ci95": [
+          4.422524492263794,
+          4.643819522857666
+        ],
+        "energy_nll": 2.7364964485168457,
+        "energy_nll_ci95": [
+          2.7175294399261474,
+          2.7567620992660524
+        ],
+        "energy_coverage_68": 0.6565717141429286,
+        "energy_coverage_95": 0.9475262368815592,
+        "energy_coverage_68_ci95": [
+          0.6505747126436782,
+          0.6628448275862069
+        ],
+        "energy_coverage_95_ci95": [
+          0.9444490254872564,
+          0.9503510744627687
+        ],
+        "x0_error_median_mm": 21.08938980102539,
+        "x0_error_68_mm": 26.759002685546875,
+        "x0_error_68_ci95": [
+          26.576039934158324,
+          26.918667793273926
+        ],
+        "x0_rmse_mm": 22.953460693359375,
+        "x0_rmse_ci95": [
+          22.827680015563963,
+          23.09808669090271
+        ],
+        "position_nll_mm": 11.435433387756348,
+        "position_nll_ci95": [
+          11.408722138404846,
+          11.461047625541687
+        ],
+        "position_coverage_68": 0.60039980009995,
+        "position_coverage_95": 0.9472763618190905,
+        "position_coverage_68_ci95": [
+          0.5944527736131934,
+          0.6068778110944528
+        ],
+        "position_coverage_95_ci95": [
+          0.9440492253873063,
+          0.9505322338830584
+        ],
+        "direction_angle_median_deg": 8.482868194580078,
+        "direction_angle_68_deg": 13.645111083984375,
+        "direction_angle_68_ci95": [
+          13.398970246315002,
+          14.029190230369569
+        ],
+        "direction_nll_sr": -0.8415518999099731,
+        "direction_nll_ci95": [
+          -0.8690588042140007,
+          -0.8166272342205048
+        ],
+        "direction_coverage_68": 0.708095952023988,
+        "direction_coverage_95": 0.9419290354822589,
+        "direction_coverage_68_ci95": [
+          0.7020989505247376,
+          0.713971764117941
+        ],
+        "direction_coverage_95_ci95": [
+          0.9390754622688656,
+          0.9455534732633684
+        ]
+      },
+      "particle:e+": {
+        "n": 10006,
+        "statistically_small": false,
+        "pid_accuracy": 0.964421347191685,
+        "pid_accuracy_ci95": [
+          0.9613232060763542,
+          0.967976713971617
+        ],
+        "pid_brier_ci95": [
+          0.047215487462578205,
+          0.05814182146254037
+        ],
+        "pid_brier": 0.05285900578900867,
+        "pid_ece_10bin": 0.029534618210702007,
+        "pid_confusion_true_rows": [
+          [
+            0,
+            0
+          ],
+          [
+            356,
+            9650
+          ]
+        ],
+        "energy_bias_mev": -0.3877105876883816,
+        "energy_bias_ci95": [
+          -0.535188128801527,
+          -0.22781445290486343
+        ],
+        "energy_abs_residual_68_mev": 3.62969436645508,
+        "energy_abs68_ci95": [
+          3.5092543029785164,
+          3.754502201080322
+        ],
+        "energy_nll": 2.6915762424468994,
+        "energy_nll_ci95": [
+          2.6692603826522827,
+          2.715213584899902
+        ],
+        "energy_coverage_68": 0.6594043573855687,
+        "energy_coverage_95": 0.9374375374775135,
+        "energy_coverage_68_ci95": [
+          0.6508045172896262,
+          0.6681566060363782
+        ],
+        "energy_coverage_95_ci95": [
+          0.9323830701579052,
+          0.9420397761343194
+        ],
+        "x0_error_median_mm": 13.533878326416016,
+        "x0_error_68_mm": 18.314411163330078,
+        "x0_error_68_ci95": [
+          18.040895175933837,
+          18.575704526901244
+        ],
+        "x0_rmse_mm": 17.613351821899414,
+        "x0_rmse_ci95": [
+          17.43664131164551,
+          17.802192878723144
+        ],
+        "position_nll_mm": 10.429258346557617,
+        "position_nll_ci95": [
+          10.387646627426147,
+          10.477770161628722
+        ],
+        "position_coverage_68": 0.5702578452928243,
+        "position_coverage_95": 0.9042574455326804,
+        "position_coverage_68_ci95": [
+          0.5589596242254647,
+          0.5801569058564862
+        ],
+        "position_coverage_95_ci95": [
+          0.8986083349990006,
+          0.9102063761742955
+        ],
+        "direction_angle_median_deg": 10.541996002197266,
+        "direction_angle_68_deg": 15.099691390991211,
+        "direction_angle_68_ci95": [
+          14.78451874256134,
+          15.46971697807312
+        ],
+        "direction_nll_sr": -0.6388309597969055,
+        "direction_nll_ci95": [
+          -0.6717489182949066,
+          -0.6037192180752754
+        ],
+        "direction_coverage_68": 0.6085348790725564,
+        "direction_coverage_95": 0.9124525284829103,
+        "direction_coverage_68_ci95": [
+          0.599088047171697,
+          0.6181291225264841
+        ],
+        "direction_coverage_95_ci95": [
+          0.9072031780931441,
+          0.9186488107135719
+        ]
+      },
+      "particle:gamma": {
+        "n": 10004,
+        "statistically_small": false,
+        "pid_accuracy": 0.9968012794882047,
+        "pid_accuracy_ci95": [
+          0.9957017193122751,
+          0.9978008796481408
+        ],
+        "pid_brier_ci95": [
+          0.012586266912892535,
+          0.01566708821196445
+        ],
+        "pid_brier": 0.014021915224776492,
+        "pid_ece_10bin": 0.033949279024905084,
+        "pid_confusion_true_rows": [
+          [
+            9972,
+            32
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "energy_bias_mev": -0.16126234201525508,
+        "energy_bias_ci95": [
+          -0.35262067039898476,
+          0.02369945167180534
+        ],
+        "energy_abs_residual_68_mev": 5.598387756347657,
+        "energy_abs68_ci95": [
+          5.405669946670533,
+          5.823899497985845
+        ],
+        "energy_nll": 2.7814252376556396,
+        "energy_nll_ci95": [
+          2.7489145517349245,
+          2.8131659269332885
+        ],
+        "energy_coverage_68": 0.6537385045981607,
+        "energy_coverage_95": 0.9576169532187125,
+        "energy_coverage_68_ci95": [
+          0.6446896241503398,
+          0.664186825269892
+        ],
+        "energy_coverage_95_ci95": [
+          0.9540658736505397,
+          0.9615678728508597
+        ],
+        "x0_error_median_mm": 27.031414031982422,
+        "x0_error_68_mm": 30.228599548339844,
+        "x0_error_68_ci95": [
+          30.031408739089965,
+          30.43171763420105
+        ],
+        "x0_rmse_mm": 27.26785659790039,
+        "x0_rmse_ci95": [
+          27.14915795326233,
+          27.396176624298096
+        ],
+        "position_nll_mm": 12.44180965423584,
+        "position_nll_ci95": [
+          12.427971792221069,
+          12.456667065620422
+        ],
+        "position_coverage_68": 0.630547780887645,
+        "position_coverage_95": 0.9903038784486206,
+        "position_coverage_68_ci95": [
+          0.6211515393842463,
+          0.6392542982806877
+        ],
+        "position_coverage_95_ci95": [
+          0.9882521991203518,
+          0.9921031587365055
+        ],
+        "direction_angle_median_deg": 6.690905570983887,
+        "direction_angle_68_deg": 10.194396018981934,
+        "direction_angle_68_ci95": [
+          9.807497906684876,
+          10.557526063919067
+        ],
+        "direction_nll_sr": -1.0443131923675537,
+        "direction_nll_ci95": [
+          -1.0815485805273055,
+          -1.003818491101265
+        ],
+        "direction_coverage_68": 0.8076769292283087,
+        "direction_coverage_95": 0.9714114354258296,
+        "direction_coverage_68_ci95": [
+          0.8002124150339864,
+          0.8150739704118353
+        ],
+        "direction_coverage_95_ci95": [
+          0.9682127149140344,
+          0.9750099960015993
+        ]
+      },
+      "response_mask:0": {
+        "n": 2716,
+        "statistically_small": false,
+        "pid_accuracy": 0.8777614138438881,
+        "pid_accuracy_ci95": [
+          0.865979381443299,
+          0.8888070692194403
+        ],
+        "pid_brier_ci95": [
+          0.196724612739213,
+          0.23215591040662528
+        ],
+        "pid_brier": 0.2151126706417671,
+        "pid_ece_10bin": 0.016125252039688842,
+        "pid_confusion_true_rows": [
+          [
+            2384,
+            0
+          ],
+          [
+            332,
+            0
+          ]
+        ],
+        "energy_bias_mev": -0.38785041444542284,
+        "energy_bias_ci95": [
+          -0.9759915554083125,
+          0.22828098720500842
+        ],
+        "energy_abs_residual_68_mev": 20.282466888427734,
+        "energy_abs68_ci95": [
+          20.012112617492676,
+          20.75275981903076
+        ],
+        "energy_nll": 4.260500431060791,
+        "energy_nll_ci95": [
+          4.243432724475861,
+          4.27705066204071
+        ],
+        "energy_coverage_68": 0.5673784977908689,
+        "energy_coverage_95": 0.9988954344624448,
+        "energy_coverage_68_ci95": [
+          0.5498803387334316,
+          0.583578792341679
+        ],
+        "energy_coverage_95_ci95": [
+          0.9974226804123711,
+          1.0
+        ],
+        "x0_error_median_mm": 27.338991165161133,
+        "x0_error_68_mm": 30.489553451538086,
+        "x0_error_68_ci95": [
+          30.065885925292967,
+          30.74770498275757
+        ],
+        "x0_rmse_mm": 27.491792678833008,
+        "x0_rmse_ci95": [
+          27.207180500030518,
+          27.745410919189453
+        ],
+        "position_nll_mm": 12.533418655395508,
+        "position_nll_ci95": [
+          12.506513166427613,
+          12.56149365901947
+        ],
+        "position_coverage_68": 0.6299705449189985,
+        "position_coverage_95": 0.9988954344624448,
+        "position_coverage_68_ci95": [
+          0.6084223122238586,
+          0.649309646539028
+        ],
+        "position_coverage_95_ci95": [
+          0.997229381443299,
+          1.0
+        ],
+        "direction_angle_median_deg": 89.6417236328125,
+        "direction_angle_68_deg": 132.7888946533203,
+        "direction_angle_68_ci95": [
+          129.91624603271484,
+          134.90617866516112
+        ],
+        "direction_nll_sr": 1.752557396888733,
+        "direction_nll_ci95": [
+          1.7163562178611755,
+          1.7909979075193405
+        ],
+        "direction_coverage_68": 0.6627393225331369,
+        "direction_coverage_95": 0.9414580265095729,
+        "direction_coverage_68_ci95": [
+          0.6461524300441827,
+          0.6809738586156112
+        ],
+        "direction_coverage_95_ci95": [
+          0.9322533136966127,
+          0.9493832842415316
+        ]
+      },
+      "response_mask:1": {
+        "n": 41,
+        "statistically_small": true,
+        "pid_accuracy": 0.9024390243902439,
+        "pid_accuracy_ci95": null,
+        "pid_brier_ci95": null,
+        "pid_brier": 0.19532184568380298,
+        "pid_ece_10bin": 0.11681340671167144,
+        "pid_confusion_true_rows": [
+          [
+            30,
+            0
+          ],
+          [
+            4,
+            7
+          ]
+        ],
+        "energy_bias_mev": -0.14710568963754467,
+        "energy_bias_ci95": null,
+        "energy_abs_residual_68_mev": 18.999298858642586,
+        "energy_abs68_ci95": null,
+        "energy_nll": 4.255906105041504,
+        "energy_nll_ci95": null,
+        "energy_coverage_68": 0.6585365853658537,
+        "energy_coverage_95": 0.8780487804878049,
+        "energy_coverage_68_ci95": null,
+        "energy_coverage_95_ci95": null,
+        "x0_error_median_mm": 29.128385543823242,
+        "x0_error_68_mm": 31.733388900756836,
+        "x0_error_68_ci95": null,
+        "x0_rmse_mm": 29.78386878967285,
+        "x0_rmse_ci95": null,
+        "position_nll_mm": 13.063713073730469,
+        "position_nll_ci95": null,
+        "position_coverage_68": 0.4634146341463415,
+        "position_coverage_95": 0.9024390243902439,
+        "position_coverage_68_ci95": null,
+        "position_coverage_95_ci95": null,
+        "direction_angle_median_deg": 7.04038143157959,
+        "direction_angle_68_deg": 11.44990062713623,
+        "direction_angle_68_ci95": null,
+        "direction_nll_sr": -1.0206693410873413,
+        "direction_nll_ci95": null,
+        "direction_coverage_68": 0.6829268292682927,
+        "direction_coverage_95": 0.926829268292683,
+        "direction_coverage_68_ci95": null,
+        "direction_coverage_95_ci95": null
+      },
+      "response_mask:2": {
+        "n": 221,
+        "statistically_small": false,
+        "pid_accuracy": 0.995475113122172,
+        "pid_accuracy_ci95": [
+          0.9864253393665159,
+          1.0
+        ],
+        "pid_brier_ci95": [
+          0.0013833043471711817,
+          0.011764279688112445
+        ],
+        "pid_brier": 0.005820941933516655,
+        "pid_ece_10bin": 0.008994729001058173,
+        "pid_confusion_true_rows": [
+          [
+            48,
+            0
+          ],
+          [
+            1,
+            172
+          ]
+        ],
+        "energy_bias_mev": 0.7286265478364078,
+        "energy_bias_ci95": [
+          -0.8147856563845928,
+          2.557002610264014
+        ],
+        "energy_abs_residual_68_mev": 12.894912338256836,
+        "energy_abs68_ci95": [
+          10.620331645011902,
+          14.710767555236819
+        ],
+        "energy_nll": 3.4632649421691895,
+        "energy_nll_ci95": [
+          3.297579675912857,
+          3.633916127681732
+        ],
+        "energy_coverage_68": 0.5927601809954751,
+        "energy_coverage_95": 0.9276018099547512,
+        "energy_coverage_68_ci95": [
+          0.5248868778280543,
+          0.6515837104072398
+        ],
+        "energy_coverage_95_ci95": [
+          0.8914027149321267,
+          0.9592760180995475
+        ],
+        "x0_error_median_mm": 23.960628509521484,
+        "x0_error_68_mm": 27.776832580566406,
+        "x0_error_68_ci95": [
+          26.396935081481935,
+          29.671629095077513
+        ],
+        "x0_rmse_mm": 25.213239669799805,
+        "x0_rmse_ci95": [
+          24.00709466934204,
+          26.473872804641722
+        ],
+        "position_nll_mm": 11.999312400817871,
+        "position_nll_ci95": [
+          11.83524534702301,
+          12.166984915733337
+        ],
+        "position_coverage_68": 0.6108597285067874,
+        "position_coverage_95": 0.9457013574660633,
+        "position_coverage_68_ci95": [
+          0.5520361990950227,
+          0.6742081447963801
+        ],
+        "position_coverage_95_ci95": [
+          0.9140271493212669,
+          0.9728506787330317
+        ],
+        "direction_angle_median_deg": 29.140058517456055,
+        "direction_angle_68_deg": 47.7450065612793,
+        "direction_angle_68_ci95": [
+          38.24409990310669,
+          56.602986431121806
+        ],
+        "direction_nll_sr": 0.32038748264312744,
+        "direction_nll_ci95": [
+          0.07478920854628086,
+          0.5865696817636489
+        ],
+        "direction_coverage_68": 0.5656108597285068,
+        "direction_coverage_95": 0.9276018099547512,
+        "direction_coverage_68_ci95": [
+          0.502262443438914,
+          0.6358597285067872
+        ],
+        "direction_coverage_95_ci95": [
+          0.8959276018099548,
+          0.9592760180995475
+        ]
+      },
+      "response_mask:3": {
+        "n": 587,
+        "statistically_small": false,
+        "pid_accuracy": 1.0,
+        "pid_accuracy_ci95": [
+          1.0,
+          1.0
+        ],
+        "pid_brier_ci95": [
+          2.0225222056280184e-07,
+          0.00020338723531715026
+        ],
+        "pid_brier": 6.798636037073377e-05,
+        "pid_ece_10bin": 0.0003393775762853671,
+        "pid_confusion_true_rows": [
+          [
+            38,
+            0
+          ],
+          [
+            0,
+            549
+          ]
+        ],
+        "energy_bias_mev": 0.14033324247324486,
+        "energy_bias_ci95": [
+          -0.7878177205636919,
+          1.148110791558504
+        ],
+        "energy_abs_residual_68_mev": 12.55148406982422,
+        "energy_abs68_ci95": [
+          11.688940965652467,
+          13.657835369110108
+        ],
+        "energy_nll": 3.806403636932373,
+        "energy_nll_ci95": [
+          3.748949962854385,
+          3.8574737071990968
+        ],
+        "energy_coverage_68": 0.6678023850085179,
+        "energy_coverage_95": 0.9420783645655877,
+        "energy_coverage_68_ci95": [
+          0.6294293015332199,
+          0.706984667802385
+        ],
+        "energy_coverage_95_ci95": [
+          0.9241482112436117,
+          0.9608177172061328
+        ],
+        "x0_error_median_mm": 15.75437068939209,
+        "x0_error_68_mm": 20.523759841918945,
+        "x0_error_68_ci95": [
+          18.9606924533844,
+          21.556518554687496
+        ],
+        "x0_rmse_mm": 19.10122299194336,
+        "x0_rmse_ci95": [
+          18.48620476722717,
+          19.867437028884886
+        ],
+        "position_nll_mm": 11.231829643249512,
+        "position_nll_ci95": [
+          11.05967435836792,
+          11.43714530467987
+        ],
+        "position_coverage_68": 0.5212947189097104,
+        "position_coverage_95": 0.8739352640545145,
+        "position_coverage_68_ci95": [
+          0.4838160136286201,
+          0.5622657580919931
+        ],
+        "position_coverage_95_ci95": [
+          0.848381601362862,
+          0.9020868824531516
+        ],
+        "direction_angle_median_deg": 8.96383285522461,
+        "direction_angle_68_deg": 11.296638488769531,
+        "direction_angle_68_ci95": [
+          10.900674819946289,
+          11.764871144294737
+        ],
+        "direction_nll_sr": -1.0598984956741333,
+        "direction_nll_ci95": [
+          -1.20717833340168,
+          -0.8860747322440149
+        ],
+        "direction_coverage_68": 0.5366269165247018,
+        "direction_coverage_95": 0.8807495741056218,
+        "direction_coverage_68_ci95": [
+          0.4965502555366269,
+          0.575
+        ],
+        "direction_coverage_95_ci95": [
+          0.8534923339011925,
+          0.9063032367972743
+        ]
+      },
+      "response_mask:4": {
+        "n": 6641,
+        "statistically_small": false,
+        "pid_accuracy": 0.9945791296491492,
+        "pid_accuracy_ci95": [
+          0.9927721728655323,
+          0.9962355067007981
+        ],
+        "pid_brier_ci95": [
+          0.0056065264445381005,
+          0.010145189972130169
+        ],
+        "pid_brier": 0.007736676931284269,
+        "pid_ece_10bin": 0.003460433886651042,
+        "pid_confusion_true_rows": [
+          [
+            6374,
+            24
+          ],
+          [
+            12,
+            231
+          ]
+        ],
+        "energy_bias_mev": -0.12419919010325807,
+        "energy_bias_ci95": [
+          -0.2831418412958248,
+          0.031608342766399636
+        ],
+        "energy_abs_residual_68_mev": 3.5530166625976576,
+        "energy_abs68_ci95": [
+          3.4744567871093754,
+          3.6482932305336004
+        ],
+        "energy_nll": 2.2490625381469727,
+        "energy_nll_ci95": [
+          2.2180856466293335,
+          2.286636543273926
+        ],
+        "energy_coverage_68": 0.6920644481252823,
+        "energy_coverage_95": 0.9469959343472368,
+        "energy_coverage_68_ci95": [
+          0.6813582291823521,
+          0.7023113988857099
+        ],
+        "energy_coverage_95_ci95": [
+          0.9417181147417558,
+          0.952646438789339
+        ],
+        "x0_error_median_mm": 27.068849563598633,
+        "x0_error_68_mm": 30.258777618408203,
+        "x0_error_68_ci95": [
+          30.047689723968507,
+          30.4849956035614
+        ],
+        "x0_rmse_mm": 27.264047622680664,
+        "x0_rmse_ci95": [
+          27.088319396972658,
+          27.428375720977783
+        ],
+        "position_nll_mm": 12.4054594039917,
+        "position_nll_ci95": [
+          12.391322445869445,
+          12.420177364349366
+        ],
+        "position_coverage_68": 0.6380063243487426,
+        "position_coverage_95": 0.9924710134015962,
+        "position_coverage_68_ci95": [
+          0.6261820508959494,
+          0.6493939165788285
+        ],
+        "position_coverage_95_ci95": [
+          0.990735581990664,
+          0.9945076042764643
+        ],
+        "direction_angle_median_deg": 5.2694597244262695,
+        "direction_angle_68_deg": 6.64816951751709,
+        "direction_angle_68_ci95": [
+          6.545365905761718,
+          6.738926565647125
+        ],
+        "direction_nll_sr": -2.02506422996521,
+        "direction_nll_ci95": [
+          -2.049208199977875,
+          -2.001690024137497
+        ],
+        "direction_coverage_68": 0.8796867941575064,
+        "direction_coverage_95": 0.9912663755458515,
+        "direction_coverage_68_ci95": [
+          0.8717060683631983,
+          0.8874454148471616
+        ],
+        "direction_coverage_95_ci95": [
+          0.9890076795663304,
+          0.9935250715253727
+        ]
+      },
+      "response_mask:5": {
+        "n": 369,
+        "statistically_small": false,
+        "pid_accuracy": 0.989159891598916,
+        "pid_accuracy_ci95": [
+          0.975609756097561,
+          0.997289972899729
+        ],
+        "pid_brier_ci95": [
+          0.0062834264487216015,
+          0.03857622646478297
+        ],
+        "pid_brier": 0.01978067308435308,
+        "pid_ece_10bin": 0.010489643427737692,
+        "pid_confusion_true_rows": [
+          [
+            322,
+            4
+          ],
+          [
+            0,
+            43
+          ]
+        ],
+        "energy_bias_mev": 0.3303663904367262,
+        "energy_bias_ci95": [
+          -0.39329369379192347,
+          1.0697503215936197
+        ],
+        "energy_abs_residual_68_mev": 3.3686249303817752,
+        "energy_abs68_ci95": [
+          2.9209695434570313,
+          3.7238468151688573
+        ],
+        "energy_nll": 2.453625202178955,
+        "energy_nll_ci95": [
+          2.299227464199066,
+          2.6067236363887787
+        ],
+        "energy_coverage_68": 0.6233062330623306,
+        "energy_coverage_95": 0.9376693766937669,
+        "energy_coverage_68_ci95": [
+          0.5718157181571816,
+          0.6720867208672087
+        ],
+        "energy_coverage_95_ci95": [
+          0.9105691056910569,
+          0.962059620596206
+        ],
+        "x0_error_median_mm": 26.923358917236328,
+        "x0_error_68_mm": 29.7910213470459,
+        "x0_error_68_ci95": [
+          29.011985778808594,
+          30.393571043014525
+        ],
+        "x0_rmse_mm": 27.04854965209961,
+        "x0_rmse_ci95": [
+          26.35595874786377,
+          27.681759309768676
+        ],
+        "position_nll_mm": 12.423309326171875,
+        "position_nll_ci95": [
+          12.334229755401612,
+          12.501790690422059
+        ],
+        "position_coverage_68": 0.6287262872628726,
+        "position_coverage_95": 0.981029810298103,
+        "position_coverage_68_ci95": [
+          0.5799457994579946,
+          0.6829268292682927
+        ],
+        "position_coverage_95_ci95": [
+          0.964769647696477,
+          0.994579945799458
+        ],
+        "direction_angle_median_deg": 7.361912250518799,
+        "direction_angle_68_deg": 10.448293685913086,
+        "direction_angle_68_ci95": [
+          9.65385103225708,
+          11.735960960388184
+        ],
+        "direction_nll_sr": -1.0980385541915894,
+        "direction_nll_ci95": [
+          -1.2995958417654037,
+          -0.9094183340668679
+        ],
+        "direction_coverage_68": 0.6991869918699187,
+        "direction_coverage_95": 0.9349593495934959,
+        "direction_coverage_68_ci95": [
+          0.6558265582655827,
+          0.7452574525745257
+        ],
+        "direction_coverage_95_ci95": [
+          0.9105691056910569,
+          0.9580623306233061
+        ]
+      },
+      "response_mask:6": {
+        "n": 1777,
+        "statistically_small": false,
+        "pid_accuracy": 0.9966235227912211,
+        "pid_accuracy_ci95": [
+          0.9935143500281374,
+          0.9991699493528419
+        ],
+        "pid_brier_ci95": [
+          0.0015807110578381842,
+          0.009052535627785399
+        ],
+        "pid_brier": 0.004723467042768754,
+        "pid_ece_10bin": 0.0015655409504875153,
+        "pid_confusion_true_rows": [
+          [
+            264,
+            2
+          ],
+          [
+            4,
+            1507
+          ]
+        ],
+        "energy_bias_mev": 0.023151933934621317,
+        "energy_bias_ci95": [
+          -0.2772269516054527,
+          0.28750330068463953
+        ],
+        "energy_abs_residual_68_mev": 2.499229602813721,
+        "energy_abs68_ci95": [
+          2.3261882295608522,
+          2.6709367752075193
+        ],
+        "energy_nll": 2.313788652420044,
+        "energy_nll_ci95": [
+          2.235903835296631,
+          2.3852159202098844
+        ],
+        "energy_coverage_68": 0.550365785030951,
+        "energy_coverage_95": 0.919527293190771,
+        "energy_coverage_68_ci95": [
+          0.5272931907709623,
+          0.5714828362408554
+        ],
+        "energy_coverage_95_ci95": [
+          0.9057259425998875,
+          0.9308103545301069
+        ],
+        "x0_error_median_mm": 20.620906829833984,
+        "x0_error_68_mm": 25.632404327392578,
+        "x0_error_68_ci95": [
+          25.107190752029418,
+          26.134544372558594
+        ],
+        "x0_rmse_mm": 22.94080924987793,
+        "x0_rmse_ci95": [
+          22.52668480873108,
+          23.36995220184326
+        ],
+        "position_nll_mm": 11.531381607055664,
+        "position_nll_ci95": [
+          11.458797025680543,
+          11.609619784355164
+        ],
+        "position_coverage_68": 0.610579628587507,
+        "position_coverage_95": 0.9459763646595385,
+        "position_coverage_68_ci95": [
+          0.5897298818232977,
+          0.634243106359032
+        ],
+        "position_coverage_95_ci95": [
+          0.9346933033202026,
+          0.955543050084412
+        ],
+        "direction_angle_median_deg": 19.18457794189453,
+        "direction_angle_68_deg": 27.812776565551758,
+        "direction_angle_68_ci95": [
+          26.89538688659668,
+          28.944488525390625
+        ],
+        "direction_nll_sr": 0.35152652859687805,
+        "direction_nll_ci95": [
+          0.25048368871212007,
+          0.4591218493878841
+        ],
+        "direction_coverage_68": 0.6038266741699494,
+        "direction_coverage_95": 0.9127743387732132,
+        "direction_coverage_68_ci95": [
+          0.5838351153629713,
+          0.6252110298255487
+        ],
+        "direction_coverage_95_ci95": [
+          0.8998311761395611,
+          0.9251828925154755
+        ]
+      },
+      "response_mask:7": {
+        "n": 7658,
+        "statistically_small": false,
+        "pid_accuracy": 0.9993470880125359,
+        "pid_accuracy_ci95": [
+          0.9988247584225647,
+          0.9998694176025071
+        ],
+        "pid_brier_ci95": [
+          0.00029696779656413917,
+          0.002190440449287963
+        ],
+        "pid_brier": 0.001113863375917935,
+        "pid_ece_10bin": 0.0004206317916928661,
+        "pid_confusion_true_rows": [
+          [
+            512,
+            2
+          ],
+          [
+            3,
+            7141
+          ]
+        ],
+        "energy_bias_mev": -0.5242764422332892,
+        "energy_bias_ci95": [
+          -0.6505365073984427,
+          -0.38605433939303074
+        ],
+        "energy_abs_residual_68_mev": 3.1239295959472657,
+        "energy_abs68_ci95": [
+          3.018890398025513,
+          3.2076521816253663
+        ],
+        "energy_nll": 2.6192901134490967,
+        "energy_nll_ci95": [
+          2.5965714871883394,
+          2.647417038679123
+        ],
+        "energy_coverage_68": 0.6846435100548446,
+        "energy_coverage_95": 0.9381039435884043,
+        "energy_coverage_68_ci95": [
+          0.6736745886654479,
+          0.6950411334552102
+        ],
+        "energy_coverage_95_ci95": [
+          0.9328120919300079,
+          0.943999738835205
+        ],
+        "x0_error_median_mm": 12.046346664428711,
+        "x0_error_68_mm": 16.17401123046875,
+        "x0_error_68_ci95": [
+          15.943591785430907,
+          16.48068528175354
+        ],
+        "x0_rmse_mm": 15.986340522766113,
+        "x0_rmse_ci95": [
+          15.765533089637756,
+          16.18723006248474
+        ],
+        "position_nll_mm": 10.125565528869629,
+        "position_nll_ci95": [
+          10.07503547668457,
+          10.169942498207092
+        ],
+        "position_coverage_68": 0.5600679028466963,
+        "position_coverage_95": 0.8943588404283103,
+        "position_coverage_68_ci95": [
+          0.5501991381561766,
+          0.5711119091146514
+        ],
+        "position_coverage_95_ci95": [
+          0.888090885348655,
+          0.9016094280490989
+        ],
+        "direction_angle_median_deg": 9.077866554260254,
+        "direction_angle_68_deg": 12.114980697631836,
+        "direction_angle_68_ci95": [
+          11.897609639167786,
+          12.402811408042908
+        ],
+        "direction_nll_sr": -1.0155695676803589,
+        "direction_nll_ci95": [
+          -1.0473853409290315,
+          -0.9839565813541412
+        ],
+        "direction_coverage_68": 0.6173935753460433,
+        "direction_coverage_95": 0.9115957168973622,
+        "direction_coverage_68_ci95": [
+          0.6058337686079917,
+          0.6294757116740664
+        ],
+        "direction_coverage_95_ci95": [
+          0.906173282841473,
+          0.9186602246017237
+        ]
+      },
+      "particle:e+|mask:0": {
+        "n": 332,
+        "statistically_small": false,
+        "pid_accuracy": 0.0,
+        "pid_accuracy_ci95": [
+          0.0,
+          0.0
+        ],
+        "pid_brier_ci95": [
+          1.4848340331237062,
+          1.4848340331237062
+        ],
+        "pid_brier": 1.4848340331237062,
+        "pid_ece_10bin": 0.861636221408844,
+        "pid_confusion_true_rows": [
+          [
+            0,
+            0
+          ],
+          [
+            332,
+            0
+          ]
+        ],
+        "energy_bias_mev": -0.6820657893858222,
+        "energy_bias_ci95": [
+          -2.386969740740697,
+          0.9867371947142697
+        ],
+        "energy_abs_residual_68_mev": 20.22737991333008,
+        "energy_abs68_ci95": [
+          18.356645584106445,
+          21.040479972839357
+        ],
+        "energy_nll": 4.247235298156738,
+        "energy_nll_ci95": [
+          4.198100662231445,
+          4.304130232334137
+        ],
+        "energy_coverage_68": 0.5903614457831325,
+        "energy_coverage_95": 1.0,
+        "energy_coverage_68_ci95": [
+          0.536144578313253,
+          0.6371234939759035
+        ],
+        "energy_coverage_95_ci95": [
+          1.0,
+          1.0
+        ],
+        "x0_error_median_mm": 26.90898895263672,
+        "x0_error_68_mm": 30.04681396484375,
+        "x0_error_68_ci95": [
+          28.905524587631227,
+          30.855857849121094
+        ],
+        "x0_rmse_mm": 27.26858139038086,
+        "x0_rmse_ci95": [
+          26.586025190353393,
+          27.919298219680787
+        ],
+        "position_nll_mm": 12.512301445007324,
+        "position_nll_ci95": [
+          12.439483642578125,
+          12.580375909805298
+        ],
+        "position_coverage_68": 0.6475903614457831,
+        "position_coverage_95": 1.0,
+        "position_coverage_68_ci95": [
+          0.5993975903614458,
+          0.6943524096385542
+        ],
+        "position_coverage_95_ci95": [
+          1.0,
+          1.0
+        ],
+        "direction_angle_median_deg": 91.43855285644531,
+        "direction_angle_68_deg": 142.72235107421875,
+        "direction_angle_68_ci95": [
+          138.16534767150878,
+          144.98612213134766
+        ],
+        "direction_nll_sr": 1.0327459573745728,
+        "direction_nll_ci95": [
+          0.9719295889139176,
+          1.0933245599269865
+        ],
+        "direction_coverage_68": 0.5421686746987951,
+        "direction_coverage_95": 0.9427710843373494,
+        "direction_coverage_68_ci95": [
+          0.49698795180722893,
+          0.5979668674698795
+        ],
+        "direction_coverage_95_ci95": [
+          0.9156626506024096,
+          0.9668674698795181
+        ]
+      },
+      "particle:e+|mask:1": {
+        "n": 11,
+        "statistically_small": true,
+        "pid_accuracy": 0.6363636363636364,
+        "pid_accuracy_ci95": null,
+        "pid_brier_ci95": null,
+        "pid_brier": 0.7085780990164723,
+        "pid_ece_10bin": 0.37976304509423,
+        "pid_confusion_true_rows": [
+          [
+            0,
+            0
+          ],
+          [
+            4,
+            7
+          ]
+        ],
+        "energy_bias_mev": -6.101962609724565,
+        "energy_bias_ci95": null,
+        "energy_abs_residual_68_mev": 21.84076690673828,
+        "energy_abs68_ci95": null,
+        "energy_nll": 4.279896259307861,
+        "energy_nll_ci95": null,
+        "energy_coverage_68": 0.5454545454545454,
+        "energy_coverage_95": 0.8181818181818182,
+        "energy_coverage_68_ci95": null,
+        "energy_coverage_95_ci95": null,
+        "x0_error_median_mm": 29.179637908935547,
+        "x0_error_68_mm": 30.783370971679688,
+        "x0_error_68_ci95": null,
+        "x0_rmse_mm": 28.643171310424805,
+        "x0_rmse_ci95": null,
+        "position_nll_mm": 13.04404354095459,
+        "position_nll_ci95": null,
+        "position_coverage_68": 0.5454545454545454,
+        "position_coverage_95": 0.9090909090909091,
+        "position_coverage_68_ci95": null,
+        "position_coverage_95_ci95": null,
+        "direction_angle_median_deg": 12.208457946777344,
+        "direction_angle_68_deg": 14.848957061767578,
+        "direction_angle_68_ci95": null,
+        "direction_nll_sr": -0.7448007464408875,
+        "direction_nll_ci95": null,
+        "direction_coverage_68": 0.5454545454545454,
+        "direction_coverage_95": 0.8181818181818182,
+        "direction_coverage_68_ci95": null,
+        "direction_coverage_95_ci95": null
+      },
+      "particle:e+|mask:2": {
+        "n": 173,
+        "statistically_small": false,
+        "pid_accuracy": 0.9942196531791907,
+        "pid_accuracy_ci95": [
+          0.9796242774566474,
+          1.0
+        ],
+        "pid_brier_ci95": [
+          4.240837069791112e-06,
+          0.008880407441003607
+        ],
+        "pid_brier": 0.003212100291881102,
+        "pid_ece_10bin": 0.004431936093148468,
+        "pid_confusion_true_rows": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            172
+          ]
+        ],
+        "energy_bias_mev": 0.22201657708669673,
+        "energy_bias_ci95": [
+          -1.6861999808019297,
+          2.3093107647289433
+        ],
+        "energy_abs_residual_68_mev": 12.90205551147461,
+        "energy_abs68_ci95": [
+          10.377876281738281,
+          15.037381790161131
+        ],
+        "energy_nll": 3.476952314376831,
+        "energy_nll_ci95": [
+          3.297200644016266,
+          3.684087175130844
+        ],
+        "energy_coverage_68": 0.5780346820809249,
+        "energy_coverage_95": 0.9132947976878613,
+        "energy_coverage_68_ci95": [
+          0.5028901734104047,
+          0.6504335260115606
+        ],
+        "energy_coverage_95_ci95": [
+          0.875578034682081,
+          0.9479768786127167
+        ],
+        "x0_error_median_mm": 23.960628509521484,
+        "x0_error_68_mm": 27.635305404663086,
+        "x0_error_68_ci95": [
+          25.965735769271852,
+          29.773698520660396
+        ],
+        "x0_rmse_mm": 25.04906463623047,
+        "x0_rmse_ci95": [
+          23.749730110168457,
+          26.337948608398438
+        ],
+        "position_nll_mm": 11.891401290893555,
+        "position_nll_ci95": [
+          11.69224019050598,
+          12.096077060699463
+        ],
+        "position_coverage_68": 0.6011560693641619,
+        "position_coverage_95": 0.930635838150289,
+        "position_coverage_68_ci95": [
+          0.5260115606936416,
+          0.6705202312138728
+        ],
+        "position_coverage_95_ci95": [
+          0.8959537572254336,
+          0.9595375722543352
+        ],
+        "direction_angle_median_deg": 23.94983673095703,
+        "direction_angle_68_deg": 37.826717376708984,
+        "direction_angle_68_ci95": [
+          32.7163743019104,
+          45.65005998611448
+        ],
+        "direction_nll_sr": 0.059758108109235764,
+        "direction_nll_ci95": [
+          -0.19592968933284283,
+          0.3233560860157011
+        ],
+        "direction_coverage_68": 0.5838150289017341,
+        "direction_coverage_95": 0.9421965317919075,
+        "direction_coverage_68_ci95": [
+          0.5202312138728323,
+          0.6589595375722543
+        ],
+        "direction_coverage_95_ci95": [
+          0.9017341040462428,
+          0.9741329479768784
+        ]
+      },
+      "particle:e+|mask:3": {
+        "n": 549,
+        "statistically_small": false,
+        "pid_accuracy": 1.0,
+        "pid_accuracy_ci95": [
+          1.0,
+          1.0
+        ],
+        "pid_brier_ci95": [
+          1.5192800580538275e-07,
+          8.605779208205521e-07
+        ],
+        "pid_brier": 4.4629464717736836e-07,
+        "pid_ece_10bin": 0.00010073184967041016,
+        "pid_confusion_true_rows": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            549
+          ]
+        ],
+        "energy_bias_mev": 0.05784956809601497,
+        "energy_bias_ci95": [
+          -0.8757379955878457,
+          1.0943077738873506
+        ],
+        "energy_abs_residual_68_mev": 12.460380859375,
+        "energy_abs68_ci95": [
+          11.60850311279297,
+          13.497963094711302
+        ],
+        "energy_nll": 3.8011085987091064,
+        "energy_nll_ci95": [
+          3.7548481464385985,
+          3.850885260105133
+        ],
+        "energy_coverage_68": 0.6757741347905283,
+        "energy_coverage_95": 0.9471766848816029,
+        "energy_coverage_68_ci95": [
+          0.6357012750455373,
+          0.7113387978142076
+        ],
+        "energy_coverage_95_ci95": [
+          0.9280054644808743,
+          0.9663479052823315
+        ],
+        "x0_error_median_mm": 15.044390678405762,
+        "x0_error_68_mm": 19.397066116333008,
+        "x0_error_68_ci95": [
+          18.083922386169434,
+          20.675652074813843
+        ],
+        "x0_rmse_mm": 18.14711570739746,
+        "x0_rmse_ci95": [
+          17.44165391921997,
+          18.940725803375244
+        ],
+        "position_nll_mm": 11.122939109802246,
+        "position_nll_ci95": [
+          10.923158431053162,
+          11.287636661529541
+        ],
+        "position_coverage_68": 0.5209471766848816,
+        "position_coverage_95": 0.8706739526411658,
+        "position_coverage_68_ci95": [
+          0.4762750455373406,
+          0.5637978142076502
+        ],
+        "position_coverage_95_ci95": [
+          0.8415300546448088,
+          0.8953096539162112
+        ],
+        "direction_angle_median_deg": 8.758045196533203,
+        "direction_angle_68_deg": 11.18069076538086,
+        "direction_angle_68_ci95": [
+          10.417240715026855,
+          11.668059372901917
+        ],
+        "direction_nll_sr": -1.1479047536849976,
+        "direction_nll_ci95": [
+          -1.308422675728798,
+          -0.9658523187041285
+        ],
+        "direction_coverage_68": 0.546448087431694,
+        "direction_coverage_95": 0.8907103825136612,
+        "direction_coverage_68_ci95": [
+          0.5045537340619308,
+          0.5883424408014571
+        ],
+        "direction_coverage_95_ci95": [
+          0.8606102003642987,
+          0.9153460837887067
+        ]
+      },
+      "particle:e+|mask:4": {
+        "n": 243,
+        "statistically_small": false,
+        "pid_accuracy": 0.9506172839506173,
+        "pid_accuracy_ci95": [
+          0.9218106995884774,
+          0.9753086419753086
+        ],
+        "pid_brier_ci95": [
+          0.03077834782932637,
+          0.1084872666380924
+        ],
+        "pid_brier": 0.06417292241751527,
+        "pid_ece_10bin": 0.01667440379107437,
+        "pid_confusion_true_rows": [
+          [
+            0,
+            0
+          ],
+          [
+            12,
+            231
+          ]
+        ],
+        "energy_bias_mev": 1.0862315778540057,
+        "energy_bias_ci95": [
+          -0.5453137764193638,
+          2.605169591085732
+        ],
+        "energy_abs_residual_68_mev": 6.145895189046859,
+        "energy_abs68_ci95": [
+          4.768952519178391,
+          8.531182573914524
+        ],
+        "energy_nll": 2.529075860977173,
+        "energy_nll_ci95": [
+          2.279660499095917,
+          2.7483298301696775
+        ],
+        "energy_coverage_68": 0.6337448559670782,
+        "energy_coverage_95": 0.934156378600823,
+        "energy_coverage_68_ci95": [
+          0.5739711934156378,
+          0.691358024691358
+        ],
+        "energy_coverage_95_ci95": [
+          0.9031893004115227,
+          0.9629629629629629
+        ],
+        "x0_error_median_mm": 26.80771255493164,
+        "x0_error_68_mm": 30.216827392578125,
+        "x0_error_68_ci95": [
+          28.960625410079956,
+          31.314606285095216
+        ],
+        "x0_rmse_mm": 27.052858352661133,
+        "x0_rmse_ci95": [
+          26.168819522857667,
+          27.964007186889646
+        ],
+        "position_nll_mm": 12.430437088012695,
+        "position_nll_ci95": [
+          12.332129049301148,
+          12.527788662910462
+        ],
+        "position_coverage_68": 0.6502057613168725,
+        "position_coverage_95": 0.9876543209876543,
+        "position_coverage_68_ci95": [
+          0.588477366255144,
+          0.7119341563786008
+        ],
+        "position_coverage_95_ci95": [
+          0.9753086419753086,
+          1.0
+        ],
+        "direction_angle_median_deg": 51.97353744506836,
+        "direction_angle_68_deg": 78.79825592041016,
+        "direction_angle_68_ci95": [
+          71.50979824066162,
+          95.99715213775634
+        ],
+        "direction_nll_sr": 1.7604222297668457,
+        "direction_nll_ci95": [
+          1.5613116294145584,
+          1.9605610877275466
+        ],
+        "direction_coverage_68": 0.6131687242798354,
+        "direction_coverage_95": 0.8847736625514403,
+        "direction_coverage_68_ci95": [
+          0.5533950617283951,
+          0.6707818930041153
+        ],
+        "direction_coverage_95_ci95": [
+          0.8477366255144033,
+          0.9218106995884774
+        ]
+      },
+      "particle:e+|mask:5": {
+        "n": 43,
+        "statistically_small": true,
+        "pid_accuracy": 1.0,
+        "pid_accuracy_ci95": null,
+        "pid_brier_ci95": null,
+        "pid_brier": 0.011294948728186559,
+        "pid_ece_10bin": 0.026025123374406683,
+        "pid_confusion_true_rows": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            43
+          ]
+        ],
+        "energy_bias_mev": 0.3003674802738567,
+        "energy_bias_ci95": null,
+        "energy_abs_residual_68_mev": 7.591610832214356,
+        "energy_abs68_ci95": null,
+        "energy_nll": 2.690627336502075,
+        "energy_nll_ci95": null,
+        "energy_coverage_68": 0.4418604651162791,
+        "energy_coverage_95": 0.9302325581395349,
+        "energy_coverage_68_ci95": null,
+        "energy_coverage_95_ci95": null,
+        "x0_error_median_mm": 27.431482315063477,
+        "x0_error_68_mm": 29.0760498046875,
+        "x0_error_68_ci95": null,
+        "x0_rmse_mm": 26.957015991210938,
+        "x0_rmse_ci95": null,
+        "position_nll_mm": 12.336316108703613,
+        "position_nll_ci95": null,
+        "position_coverage_68": 0.6511627906976745,
+        "position_coverage_95": 1.0,
+        "position_coverage_68_ci95": null,
+        "position_coverage_95_ci95": null,
+        "direction_angle_median_deg": 42.06094741821289,
+        "direction_angle_68_deg": 65.60084533691406,
+        "direction_angle_68_ci95": null,
+        "direction_nll_sr": 1.614235281944275,
+        "direction_nll_ci95": null,
+        "direction_coverage_68": 0.6046511627906976,
+        "direction_coverage_95": 0.8372093023255814,
+        "direction_coverage_68_ci95": null,
+        "direction_coverage_95_ci95": null
+      },
+      "particle:e+|mask:6": {
+        "n": 1511,
+        "statistically_small": false,
+        "pid_accuracy": 0.9973527465254798,
+        "pid_accuracy_ci95": [
+          0.9943580410324289,
+          0.9996856386499007
+        ],
+        "pid_brier_ci95": [
+          0.0009850299610727363,
+          0.008280431825357377
+        ],
+        "pid_brier": 0.003739227425422726,
+        "pid_ece_10bin": 0.001116041352936685,
+        "pid_confusion_true_rows": [
+          [
+            0,
+            0
+          ],
+          [
+            4,
+            1507
+          ]
+        ],
+        "energy_bias_mev": 0.04981313078971808,
+        "energy_bias_ci95": [
+          -0.26708047537804624,
+          0.3969231292716499
+        ],
+        "energy_abs_residual_68_mev": 2.464041805267336,
+        "energy_abs68_ci95": [
+          2.2963974165916454,
+          2.662721633911133
+        ],
+        "energy_nll": 2.3163318634033203,
+        "energy_nll_ci95": [
+          2.239481121301651,
+          2.389969676733017
+        ],
+        "energy_coverage_68": 0.542686962276638,
+        "energy_coverage_95": 0.913964262078094,
+        "energy_coverage_68_ci95": [
+          0.5155526141628061,
+          0.5659166115155525
+        ],
+        "energy_coverage_95_ci95": [
+          0.8997187293183322,
+          0.9258769027134348
+        ],
+        "x0_error_median_mm": 19.378564834594727,
+        "x0_error_68_mm": 24.53688621520996,
+        "x0_error_68_ci95": [
+          24.009019517898558,
+          25.08401412963867
+        ],
+        "x0_rmse_mm": 22.0257511138916,
+        "x0_rmse_ci95": [
+          21.591476011276246,
+          22.516701173782348
+        ],
+        "position_nll_mm": 11.3617582321167,
+        "position_nll_ci95": [
+          11.279359841346741,
+          11.438044142723083
+        ],
+        "position_coverage_68": 0.6121773659827928,
+        "position_coverage_95": 0.9410986101919259,
+        "position_coverage_68_ci95": [
+          0.5876902713434812,
+          0.633702845797485
+        ],
+        "position_coverage_95_ci95": [
+          0.9291859695565851,
+          0.9520350761085373
+        ],
+        "direction_angle_median_deg": 20.23234748840332,
+        "direction_angle_68_deg": 28.27310562133789,
+        "direction_angle_68_ci95": [
+          27.07218360900879,
+          29.4373899936676
+        ],
+        "direction_nll_sr": 0.44945263862609863,
+        "direction_nll_ci95": [
+          0.3424859903752804,
+          0.5491552025079727
+        ],
+        "direction_coverage_68": 0.5949702183984117,
+        "direction_coverage_95": 0.9106551952349438,
+        "direction_coverage_68_ci95": [
+          0.5711118464592985,
+          0.619142951687624
+        ],
+        "direction_coverage_95_ci95": [
+          0.8960953011250827,
+          0.9238914626075446
+        ]
+      },
+      "particle:e+|mask:7": {
+        "n": 7144,
+        "statistically_small": false,
+        "pid_accuracy": 0.9995800671892497,
+        "pid_accuracy_ci95": [
+          0.9990201567749161,
+          1.0
+        ],
+        "pid_brier_ci95": [
+          3.59043523168283e-05,
+          0.0018231443833075461
+        ],
+        "pid_brier": 0.0008205962891560144,
+        "pid_ece_10bin": 0.00044634442647123034,
+        "pid_confusion_true_rows": [
+          [
+            0,
+            0
+          ],
+          [
+            3,
+            7141
+          ]
+        ],
+        "energy_bias_mev": -0.5610541301849324,
+        "energy_bias_ci95": [
+          -0.6979218184856191,
+          -0.4352266864868326
+        ],
+        "energy_abs_residual_68_mev": 3.044529876708987,
+        "energy_abs68_ci95": [
+          2.956574186325074,
+          3.146224079132081
+        ],
+        "energy_nll": 2.5974509716033936,
+        "energy_nll_ci95": [
+          2.5674708127975463,
+          2.6258977234363554
+        ],
+        "energy_coverage_68": 0.6903695408734603,
+        "energy_coverage_95": 0.9396696528555432,
+        "energy_coverage_68_ci95": [
+          0.6794512877939529,
+          0.6996150615901456
+        ],
+        "energy_coverage_95_ci95": [
+          0.9333706606942889,
+          0.9442889137737962
+        ],
+        "x0_error_median_mm": 11.444327354431152,
+        "x0_error_68_mm": 15.270092964172363,
+        "x0_error_68_ci95": [
+          15.039421606063843,
+          15.55948610305786
+        ],
+        "x0_rmse_mm": 15.04379653930664,
+        "x0_rmse_ci95": [
+          14.855899477005005,
+          15.24382255077362
+        ],
+        "position_nll_mm": 9.962934494018555,
+        "position_nll_ci95": [
+          9.906107091903687,
+          10.008946251869201
+        ],
+        "position_coverage_68": 0.5576707726763718,
+        "position_coverage_95": 0.8905375139977604,
+        "position_coverage_68_ci95": [
+          0.5474314109742441,
+          0.568809490481523
+        ],
+        "position_coverage_95_ci95": [
+          0.8839585666293394,
+          0.897956326987682
+        ],
+        "direction_angle_median_deg": 9.073373794555664,
+        "direction_angle_68_deg": 12.115633010864258,
+        "direction_angle_68_ci95": [
+          11.891310548782348,
+          12.460100841522216
+        ],
+        "direction_nll_sr": -1.0194957256317139,
+        "direction_nll_ci95": [
+          -1.049881187081337,
+          -0.987855252623558
+        ],
+        "direction_coverage_68": 0.6198208286674132,
+        "direction_coverage_95": 0.9139137737961927,
+        "direction_coverage_68_ci95": [
+          0.6085491321388579,
+          0.6296997480403135
+        ],
+        "direction_coverage_95_ci95": [
+          0.9075342945128779,
+          0.9204262318029115
+        ]
+      },
+      "particle:gamma|mask:0": {
+        "n": 2384,
+        "statistically_small": false,
+        "pid_accuracy": 1.0,
+        "pid_accuracy_ci95": [
+          1.0,
+          1.0
+        ],
+        "pid_brier_ci95": [
+          0.038289058081362855,
+          0.038289058081362855
+        ],
+        "pid_brier": 0.038289058081362855,
+        "pid_ece_10bin": 0.13836383819580078,
+        "pid_confusion_true_rows": [
+          [
+            2384,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "energy_bias_mev": -0.3468774679352665,
+        "energy_bias_ci95": [
+          -0.9981000537166529,
+          0.28733496061919167
+        ],
+        "energy_abs_residual_68_mev": 20.28988952636719,
+        "energy_abs68_ci95": [
+          19.923748514175415,
+          20.78293740749359
+        ],
+        "energy_nll": 4.262348175048828,
+        "energy_nll_ci95": [
+          4.2454838991165165,
+          4.279260385036468
+        ],
+        "energy_coverage_68": 0.5641778523489933,
+        "energy_coverage_95": 0.9987416107382551,
+        "energy_coverage_68_ci95": [
+          0.5419043624161074,
+          0.584532298657718
+        ],
+        "energy_coverage_95_ci95": [
+          0.99748322147651,
+          1.0
+        ],
+        "x0_error_median_mm": 27.421335220336914,
+        "x0_error_68_mm": 30.535823822021484,
+        "x0_error_68_ci95": [
+          30.242111206054688,
+          30.838596248626708
+        ],
+        "x0_rmse_mm": 27.522733688354492,
+        "x0_rmse_ci95": [
+          27.24127550125122,
+          27.750974321365355
+        ],
+        "position_nll_mm": 12.536359786987305,
+        "position_nll_ci95": [
+          12.505629944801331,
+          12.570485949516296
+        ],
+        "position_coverage_68": 0.62751677852349,
+        "position_coverage_95": 0.9987416107382551,
+        "position_coverage_68_ci95": [
+          0.606501677852349,
+          0.6474517617449664
+        ],
+        "position_coverage_95_ci95": [
+          0.9970637583892618,
+          1.0
+        ],
+        "direction_angle_median_deg": 89.47691345214844,
+        "direction_angle_68_deg": 130.34445190429688,
+        "direction_angle_68_ci95": [
+          127.96321868896484,
+          132.78448486328125
+        ],
+        "direction_nll_sr": 1.8527995347976685,
+        "direction_nll_ci95": [
+          1.803410789370537,
+          1.9004224121570588
+        ],
+        "direction_coverage_68": 0.6795302013422819,
+        "direction_coverage_95": 0.9412751677852349,
+        "direction_coverage_68_ci95": [
+          0.6614932885906041,
+          0.6986472315436241
+        ],
+        "direction_coverage_95_ci95": [
+          0.9318267617449665,
+          0.949244966442953
+        ]
+      },
+      "particle:gamma|mask:1": {
+        "n": 30,
+        "statistically_small": true,
+        "pid_accuracy": 1.0,
+        "pid_accuracy_ci95": null,
+        "pid_brier_ci95": null,
+        "pid_brier": 0.007127886128490909,
+        "pid_ece_10bin": 0.031265449523925785,
+        "pid_confusion_true_rows": [
+          [
+            30,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "energy_bias_mev": 2.036341847727696,
+        "energy_bias_ci95": null,
+        "energy_abs_residual_68_mev": 17.785136604309084,
+        "energy_abs68_ci95": null,
+        "energy_nll": 4.247109889984131,
+        "energy_nll_ci95": null,
+        "energy_coverage_68": 0.7,
+        "energy_coverage_95": 0.9,
+        "energy_coverage_68_ci95": null,
+        "energy_coverage_95_ci95": null,
+        "x0_error_median_mm": 28.49000358581543,
+        "x0_error_68_mm": 33.32807922363281,
+        "x0_error_68_ci95": null,
+        "x0_rmse_mm": 30.191329956054688,
+        "x0_rmse_ci95": null,
+        "position_nll_mm": 13.070924758911133,
+        "position_nll_ci95": null,
+        "position_coverage_68": 0.43333333333333335,
+        "position_coverage_95": 0.9,
+        "position_coverage_68_ci95": null,
+        "position_coverage_95_ci95": null,
+        "direction_angle_median_deg": 6.522592544555664,
+        "direction_angle_68_deg": 10.443682670593262,
+        "direction_angle_68_ci95": null,
+        "direction_nll_sr": -1.1218212842941284,
+        "direction_nll_ci95": null,
+        "direction_coverage_68": 0.7333333333333333,
+        "direction_coverage_95": 0.9666666666666667,
+        "direction_coverage_68_ci95": null,
+        "direction_coverage_95_ci95": null
+      },
+      "particle:gamma|mask:2": {
+        "n": 48,
+        "statistically_small": true,
+        "pid_accuracy": 1.0,
+        "pid_accuracy_ci95": null,
+        "pid_brier_ci95": null,
+        "pid_brier": 0.01522364201691146,
+        "pid_ece_10bin": 0.025439850986003876,
+        "pid_confusion_true_rows": [
+          [
+            48,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "energy_bias_mev": 2.5545333174134917,
+        "energy_bias_ci95": null,
+        "energy_abs_residual_68_mev": 11.195377235412598,
+        "energy_abs68_ci95": null,
+        "energy_nll": 3.4139316082000732,
+        "energy_nll_ci95": null,
+        "energy_coverage_68": 0.6458333333333334,
+        "energy_coverage_95": 0.9791666666666666,
+        "energy_coverage_68_ci95": null,
+        "energy_coverage_95_ci95": null,
+        "x0_error_median_mm": 24.12771987915039,
+        "x0_error_68_mm": 28.131641387939453,
+        "x0_error_68_ci95": null,
+        "x0_rmse_mm": 25.796289443969727,
+        "x0_rmse_ci95": null,
+        "position_nll_mm": 12.388243675231934,
+        "position_nll_ci95": null,
+        "position_coverage_68": 0.6458333333333334,
+        "position_coverage_95": 1.0,
+        "position_coverage_68_ci95": null,
+        "position_coverage_95_ci95": null,
+        "direction_angle_median_deg": 56.18428039550781,
+        "direction_angle_68_deg": 79.49471282958984,
+        "direction_angle_68_ci95": null,
+        "direction_nll_sr": 1.2597393989562988,
+        "direction_nll_ci95": null,
+        "direction_coverage_68": 0.5,
+        "direction_coverage_95": 0.875,
+        "direction_coverage_68_ci95": null,
+        "direction_coverage_95_ci95": null
+      },
+      "particle:gamma|mask:3": {
+        "n": 38,
+        "statistically_small": true,
+        "pid_accuracy": 1.0,
+        "pid_accuracy_ci95": null,
+        "pid_brier_ci95": null,
+        "pid_brier": 0.0010437625730610619,
+        "pid_ece_10bin": 0.003787243052532798,
+        "pid_confusion_true_rows": [
+          [
+            38,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "energy_bias_mev": 1.3320052749232243,
+        "energy_bias_ci95": null,
+        "energy_abs_residual_68_mev": 14.239665565490723,
+        "energy_abs68_ci95": null,
+        "energy_nll": 3.8828999996185303,
+        "energy_nll_ci95": null,
+        "energy_coverage_68": 0.5526315789473685,
+        "energy_coverage_95": 0.868421052631579,
+        "energy_coverage_68_ci95": null,
+        "energy_coverage_95_ci95": null,
+        "x0_error_median_mm": 27.36071014404297,
+        "x0_error_68_mm": 34.09615707397461,
+        "x0_error_68_ci95": null,
+        "x0_rmse_mm": 29.6361141204834,
+        "x0_rmse_ci95": null,
+        "position_nll_mm": 12.805004119873047,
+        "position_nll_ci95": null,
+        "position_coverage_68": 0.5263157894736842,
+        "position_coverage_95": 0.9210526315789473,
+        "position_coverage_68_ci95": null,
+        "position_coverage_95_ci95": null,
+        "direction_angle_median_deg": 12.134302139282227,
+        "direction_angle_68_deg": 17.296916961669922,
+        "direction_angle_68_ci95": null,
+        "direction_nll_sr": 0.21156208217144012,
+        "direction_nll_ci95": null,
+        "direction_coverage_68": 0.39473684210526316,
+        "direction_coverage_95": 0.7368421052631579,
+        "direction_coverage_68_ci95": null,
+        "direction_coverage_95_ci95": null
+      },
+      "particle:gamma|mask:4": {
+        "n": 6398,
+        "statistically_small": false,
+        "pid_accuracy": 0.9962488277586746,
+        "pid_accuracy_ci95": [
+          0.9949984370115661,
+          0.9976555173491716
+        ],
+        "pid_brier_ci95": [
+          0.0038741174488905977,
+          0.007606836423573001
+        ],
+        "pid_brier": 0.005593193396874433,
+        "pid_ece_10bin": 0.00305225637488977,
+        "pid_confusion_true_rows": [
+          [
+            6374,
+            24
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "energy_bias_mev": -0.1701720998584339,
+        "energy_bias_ci95": [
+          -0.3122399895825191,
+          -0.03196693099627615
+        ],
+        "energy_abs_residual_68_mev": 3.5121646118164063,
+        "energy_abs68_ci95": [
+          3.4413956298828126,
+          3.594950771331787
+        ],
+        "energy_nll": 2.2384274005889893,
+        "energy_nll_ci95": [
+          2.2035669147968293,
+          2.274882984161377
+        ],
+        "energy_coverage_68": 0.6942794623319788,
+        "energy_coverage_95": 0.9474835886214442,
+        "energy_coverage_68_ci95": [
+          0.6829438887152235,
+          0.7062402313222882
+        ],
+        "energy_coverage_95_ci95": [
+          0.9418490153172866,
+          0.9531103469834323
+        ],
+        "x0_error_median_mm": 27.076828002929688,
+        "x0_error_68_mm": 30.264068603515625,
+        "x0_error_68_ci95": [
+          29.99832887649536,
+          30.472551822662354
+        ],
+        "x0_rmse_mm": 27.272035598754883,
+        "x0_rmse_ci95": [
+          27.11771411895752,
+          27.43114252090454
+        ],
+        "position_nll_mm": 12.404511451721191,
+        "position_nll_ci95": [
+          12.388560152053833,
+          12.42054853439331
+        ],
+        "position_coverage_68": 0.6375429821819318,
+        "position_coverage_95": 0.9926539543607378,
+        "position_coverage_68_ci95": [
+          0.6282392935292279,
+          0.6504415442325727
+        ],
+        "position_coverage_95_ci95": [
+          0.990778368240075,
+          0.9945295404814004
+        ],
+        "direction_angle_median_deg": 5.149932861328125,
+        "direction_angle_68_deg": 6.420833587646484,
+        "direction_angle_68_ci95": [
+          6.317856228351593,
+          6.516028046607971
+        ],
+        "direction_nll_sr": -2.1688392162323,
+        "direction_nll_ci95": [
+          -2.186007434129715,
+          -2.1528869926929475
+        ],
+        "direction_coverage_68": 0.889809315411066,
+        "direction_coverage_95": 0.9953110346983433,
+        "direction_coverage_68_ci95": [
+          0.8815176617693029,
+          0.8972374179431072
+        ],
+        "direction_coverage_95_ci95": [
+          0.993591747421069,
+          0.9967177242888403
+        ]
+      },
+      "particle:gamma|mask:5": {
+        "n": 326,
+        "statistically_small": false,
+        "pid_accuracy": 0.9877300613496932,
+        "pid_accuracy_ci95": [
+          0.9754601226993865,
+          0.9969325153374233
+        ],
+        "pid_brier_ci95": [
+          0.006137033471378284,
+          0.04013885436104509
+        ],
+        "pid_brier": 0.02089995574482903,
+        "pid_ece_10bin": 0.010884051856819087,
+        "pid_confusion_true_rows": [
+          [
+            322,
+            4
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "energy_bias_mev": 0.3343233018999268,
+        "energy_bias_ci95": [
+          -0.4171102889396387,
+          0.9671291423261594
+        ],
+        "energy_abs_residual_68_mev": 3.148700714111329,
+        "energy_abs68_ci95": [
+          2.75017318725586,
+          3.5212677240371697
+        ],
+        "energy_nll": 2.4223639965057373,
+        "energy_nll_ci95": [
+          2.2892807602882383,
+          2.5760443568229676
+        ],
+        "energy_coverage_68": 0.647239263803681,
+        "energy_coverage_95": 0.9386503067484663,
+        "energy_coverage_68_ci95": [
+          0.5996165644171779,
+          0.6917944785276073
+        ],
+        "energy_coverage_95_ci95": [
+          0.9141104294478528,
+          0.9631901840490797
+        ],
+        "x0_error_median_mm": 26.879018783569336,
+        "x0_error_68_mm": 29.86229705810547,
+        "x0_error_68_ci95": [
+          29.02599425315857,
+          30.453121185302734
+        ],
+        "x0_rmse_mm": 27.06060028076172,
+        "x0_rmse_ci95": [
+          26.41683030128479,
+          27.780077695846558
+        ],
+        "position_nll_mm": 12.434783935546875,
+        "position_nll_ci95": [
+          12.354653143882752,
+          12.512310719490051
+        ],
+        "position_coverage_68": 0.6257668711656442,
+        "position_coverage_95": 0.9785276073619632,
+        "position_coverage_68_ci95": [
+          0.5812116564417178,
+          0.6717791411042945
+        ],
+        "position_coverage_95_ci95": [
+          0.9631901840490797,
+          0.9938650306748467
+        ],
+        "direction_angle_median_deg": 7.05168342590332,
+        "direction_angle_68_deg": 9.294281959533691,
+        "direction_angle_68_ci95": [
+          8.632117962837219,
+          10.146485328674316
+        ],
+        "direction_nll_sr": -1.4557924270629883,
+        "direction_nll_ci95": [
+          -1.5913411051034927,
+          -1.2989040940999987
+        ],
+        "direction_coverage_68": 0.7116564417177914,
+        "direction_coverage_95": 0.9478527607361963,
+        "direction_coverage_68_ci95": [
+          0.6595092024539877,
+          0.7623466257668712
+        ],
+        "direction_coverage_95_ci95": [
+          0.9202453987730062,
+          0.9693251533742331
+        ]
+      },
+      "particle:gamma|mask:6": {
+        "n": 266,
+        "statistically_small": false,
+        "pid_accuracy": 0.9924812030075187,
+        "pid_accuracy_ci95": [
+          0.981203007518797,
+          1.0
+        ],
+        "pid_brier_ci95": [
+          0.0014234161261557651,
+          0.022018946160567647
+        ],
+        "pid_brier": 0.010314392087166682,
+        "pid_ece_10bin": 0.006283970703755988,
+        "pid_confusion_true_rows": [
+          [
+            264,
+            2
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "energy_bias_mev": -0.12829569180993208,
+        "energy_bias_ci95": [
+          -0.9333642528070263,
+          0.5974340930546078
+        ],
+        "energy_abs_residual_68_mev": 2.6192041397094727,
+        "energy_abs68_ci95": [
+          2.1816360473632814,
+          3.175332689881324
+        ],
+        "energy_nll": 2.2993438243865967,
+        "energy_nll_ci95": [
+          2.09874706864357,
+          2.500515693426132
+        ],
+        "energy_coverage_68": 0.5939849624060151,
+        "energy_coverage_95": 0.9511278195488722,
+        "energy_coverage_68_ci95": [
+          0.5281015037593985,
+          0.6523496240601503
+        ],
+        "energy_coverage_95_ci95": [
+          0.9228383458646616,
+          0.9774436090225563
+        ],
+        "x0_error_median_mm": 27.091957092285156,
+        "x0_error_68_mm": 30.417644500732422,
+        "x0_error_68_ci95": [
+          29.616267585754393,
+          31.97017889022827
+        ],
+        "x0_rmse_mm": 27.568355560302734,
+        "x0_rmse_ci95": [
+          26.580329179763794,
+          28.44466757774353
+        ],
+        "position_nll_mm": 12.494922637939453,
+        "position_nll_ci95": [
+          12.396110033988952,
+          12.596768689155578
+        ],
+        "position_coverage_68": 0.6015037593984962,
+        "position_coverage_95": 0.9736842105263158,
+        "position_coverage_68_ci95": [
+          0.5488721804511278,
+          0.6523496240601503
+        ],
+        "position_coverage_95_ci95": [
+          0.9548872180451128,
+          0.9906954887218045
+        ],
+        "direction_angle_median_deg": 11.177446365356445,
+        "direction_angle_68_deg": 22.50050926208496,
+        "direction_angle_68_ci95": [
+          17.580570459365845,
+          27.894343137741085
+        ],
+        "direction_nll_sr": -0.20473814010620117,
+        "direction_nll_ci95": [
+          -0.48590147793293,
+          0.12787065524607882
+        ],
+        "direction_coverage_68": 0.6541353383458647,
+        "direction_coverage_95": 0.924812030075188,
+        "direction_coverage_68_ci95": [
+          0.59953007518797,
+          0.7142857142857143
+        ],
+        "direction_coverage_95_ci95": [
+          0.8947368421052632,
+          0.9511278195488722
+        ]
+      },
+      "particle:gamma|mask:7": {
+        "n": 514,
+        "statistically_small": false,
+        "pid_accuracy": 0.9961089494163424,
+        "pid_accuracy_ci95": [
+          0.989250972762646,
+          1.0
+        ],
+        "pid_brier_ci95": [
+          0.00018006357564185311,
+          0.013833330411667058
+        ],
+        "pid_brier": 0.005189933546787898,
+        "pid_ece_10bin": 0.003602341803131401,
+        "pid_confusion_true_rows": [
+          [
+            512,
+            2
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "energy_bias_mev": -0.013109510858699042,
+        "energy_bias_ci95": [
+          -0.6721688709312376,
+          0.6672223621827142
+        ],
+        "energy_abs_residual_68_mev": 4.943751602172852,
+        "energy_abs68_ci95": [
+          4.383363073349002,
+          5.9926475715637215
+        ],
+        "energy_nll": 2.9228315353393555,
+        "energy_nll_ci95": [
+          2.811991113424301,
+          3.0399242877960204
+        ],
+        "energy_coverage_68": 0.6050583657587548,
+        "energy_coverage_95": 0.9163424124513618,
+        "energy_coverage_68_ci95": [
+          0.5603112840466926,
+          0.6459143968871596
+        ],
+        "energy_coverage_95_ci95": [
+          0.8919747081712063,
+          0.9407101167315175
+        ],
+        "x0_error_median_mm": 24.513769149780273,
+        "x0_error_68_mm": 28.476022720336914,
+        "x0_error_68_ci95": [
+          27.525640630722044,
+          29.07158317565918
+        ],
+        "x0_rmse_mm": 25.73065185546875,
+        "x0_rmse_ci95": [
+          24.98203706741333,
+          26.449976062774656
+        ],
+        "position_nll_mm": 12.385936737060547,
+        "position_nll_ci95": [
+          12.28505573272705,
+          12.50540359020233
+        ],
+        "position_coverage_68": 0.5933852140077821,
+        "position_coverage_95": 0.9474708171206225,
+        "position_coverage_68_ci95": [
+          0.5612354085603113,
+          0.6342412451361867
+        ],
+        "position_coverage_95_ci95": [
+          0.9299610894941635,
+          0.9649805447470817
+        ],
+        "direction_angle_median_deg": 9.099005699157715,
+        "direction_angle_68_deg": 12.03360366821289,
+        "direction_angle_68_ci95": [
+          11.407863998413086,
+          13.007884097099303
+        ],
+        "direction_nll_sr": -0.9609990119934082,
+        "direction_nll_ci95": [
+          -1.0996846109628677,
+          -0.8148876026272773
+        ],
+        "direction_coverage_68": 0.5836575875486382,
+        "direction_coverage_95": 0.8793774319066148,
+        "direction_coverage_68_ci95": [
+          0.5476167315175097,
+          0.6196984435797666
+        ],
+        "direction_coverage_95_ci95": [
+          0.8482490272373541,
+          0.9085603112840467
+        ]
+      }
+    }
+  }
+}

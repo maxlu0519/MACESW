@@ -1,0 +1,17 @@
+{
+  "best_checkpoint": "/home/luguihao/Documents/Repositories/MACESW/build/phasei_gnn_pilot_seed42_ecal_normals_20261030/best.pt",
+  "last_checkpoint": "/home/luguihao/Documents/Repositories/MACESW/build/phasei_gnn_pilot_seed42_ecal_normals_20261030/last.pt",
+  "best_epoch": 44,
+  "best_validation_loss": 2.7595158103133146,
+  "epochs_completed": 54,
+  "elapsed_seconds": 1028.3995529261883,
+  "cuda_peak_allocated_bytes": 448851456,
+  "cuda_peak_reserved_bytes": 536870912,
+  "dataset_manifest_sha256": "2696e754c26482a7e309b3a66a0afffe52196802f67dbe843aa3429b7db2b573",
+  "geometry_yaml_sha256": "ca52b495fd38202b27a1d6dd50f1b617a1a7e2a093554fc13791bb4e1eb34662",
+  "geometry_export_sha256": "2b1c2ff577c386e60459be31374cbe4c2702650edad19b8c40275248b4f6757d",
+  "train_events": 159996,
+  "validation_events": 19994,
+  "num_workers": 2,
+  "test_read_during_training": false
+}
